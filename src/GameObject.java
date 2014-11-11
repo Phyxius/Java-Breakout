@@ -9,7 +9,6 @@ import java.awt.geom.Area;
  * Usage: None, used by Brooke's TestDriver class
  */
 public abstract class GameObject implements Object2D {
-    protected GameArea gameArea;
     protected Area boundingArea;
 
     /**
@@ -17,8 +16,7 @@ public abstract class GameObject implements Object2D {
      * @param area the GameArea used for bounds checking
      * @param boundingArea the bounding Area of the object
      */
-    public GameObject(GameArea area, Area boundingArea) {
-        gameArea = area;
+    public GameObject(Area boundingArea) {
         this.boundingArea = boundingArea;
     }
 
@@ -28,8 +26,8 @@ public abstract class GameObject implements Object2D {
      * @param area the GameArea used for bounds checking
      * @param boundingShape the bounding shape of the object
      */
-    public GameObject(GameArea area, Shape boundingShape) {
-        this(area, new Area(boundingShape));
+    public GameObject(Shape boundingShape) {
+        this(new Area(boundingShape));
     }
 
     /**
@@ -101,15 +99,6 @@ public abstract class GameObject implements Object2D {
      */
     public Area getBoundingArea() {
         return boundingArea;
-    }
-    /**
-     * Returns whether or not the object is out of the game area based on its
-     * bounding rectangle
-     * @return true if the object is out of bounds, false otherwise
-     */
-    public boolean isOutOfBounds() {
-        return !(new Rectangle(0, 0, gameArea.getWidth(), gameArea.getHeight())
-                .contains(getBoundingRectangle()));
     }
 
     public void update(UpdateManager u) {

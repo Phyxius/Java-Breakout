@@ -75,4 +75,14 @@ public class GameManager {
         addedObjects.clear();
     }
 
+    /**
+     * Returns whether or not the object is out of the game area based on its
+     * bounding rectangle
+     * @param obj the object to check
+     * @return true if the object is out of bounds, false otherwise
+     */
+    public boolean isOutOfBounds(Object2D obj) {
+        return !gameArea.getAsRectangle().contains(obj.getBoundingRectangle());
+    }
+
 }

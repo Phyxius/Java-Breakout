@@ -14,7 +14,7 @@ public class Ball extends GameObject {
      * @param y the uppermost y value of the ball
      * @param diameter the diameter of the ball
      */
-    public Ball(GameArea area, int x, int y, int diameter) {
-        super(area, new Ellipse2D.Double(x, y, diameter, diameter));
+    public Ball(int x, int y, int diameter) {
+        super(new Ellipse2D.Double(x, y, diameter, diameter));
     }
 }

@@ -22,13 +22,13 @@ public class TestDriver {
         objects.add(ball);
 
         // Make a paddle
-        Paddle paddle = new Paddle(gameArea, 200, 155, 50, 40);
+        Paddle paddle = new Paddle(200, 155, 50, 40);
         objects.add(paddle);
 
         // Make a bunch of bricks
         for(int x = -10; x < 300; x+= 65) {
             for(int y = -5; y < 200; y += 30) {
-                Brick brick = new Brick(gameArea, x, y, 55, 25);
+                Brick brick = new Brick(x, y, 55, 25);
                 objects.add(brick);
             }
         }

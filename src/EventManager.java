@@ -25,4 +25,8 @@ public abstract class EventManager {
     public Rectangle getGameAreaRectangle() {
         return manager.getGameArea().getAsRectangle();
     }
+
+    public boolean isOutOfBounds(Object2D obj) {
+        return manager.isOutOfBounds(obj);
+    }
 }

@@ -27,10 +27,4 @@ public interface Object2D {
      * @return True if objects intersect.
      */
     boolean intersects(Object2D other);
-
-    /**
-     * Is any part of the object outside of the game area?
-     * @return True if part of object is out of bounds.
-     */
-    boolean isOutOfBounds();
 }
