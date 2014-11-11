@@ -48,6 +48,11 @@ public class GameManager {
         DrawingManager manager = new DrawingManager(this);
         for(GameObject o : objects) {
             o.draw(graphics, manager);
+            if (isDebugMode()) {
+                graphics.setStroke(new BasicStroke(2));
+                graphics.setColor(Color.GREEN);
+                graphics.draw(o.getBoundingArea());
+            }
         }
     }
 
