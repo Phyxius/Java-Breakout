@@ -1,0 +1,259 @@
+Ball at (25, 140)
+  Vals = 25 140 30 30
+  Bounds = java.awt.Rectangle[x=25,y=140,width=30,height=30]
+  Intersects ball? true, Ball intersects? true
+  Intersects paddle? false, Paddle intersects? false
+  Out of bounds? false
+  Is GameObject? true
+Paddle at (200, 155)
+  Vals = 200 155 50 40
+  Bounds = java.awt.Rectangle[x=200,y=155,width=50,height=40]
+  Intersects ball? false, Ball intersects? false
+  Intersects paddle? true, Paddle intersects? true
+  Out of bounds? false
+  Is GameObject? true
+Brick at (-10, -5)
+  Vals = -10 -5 55 25
+  Bounds = java.awt.Rectangle[x=-10,y=-5,width=55,height=25]
+  Intersects ball? false, Ball intersects? false
+  Intersects paddle? false, Paddle intersects? false
+  Out of bounds? true
+  Is GameObject? true
+Brick at (-10, 25)
+  Vals = -10 25 55 25
+  Bounds = java.awt.Rectangle[x=-10,y=25,width=55,height=25]
+  Intersects ball? false, Ball intersects? false
+  Intersects paddle? false, Paddle intersects? false
+  Out of bounds? true
+  Is GameObject? true
+Brick at (-10, 55)
+  Vals = -10 55 55 25
+  Bounds = java.awt.Rectangle[x=-10,y=55,width=55,height=25]
+  Intersects ball? false, Ball intersects? false
+  Intersects paddle? false, Paddle intersects? false
+  Out of bounds? true
+  Is GameObject? true
+Brick at (-10, 85)
+  Vals = -10 85 55 25
+  Bounds = java.awt.Rectangle[x=-10,y=85,width=55,height=25]
+  Intersects ball? false, Ball intersects? false
+  Intersects paddle? false, Paddle intersects? false
+  Out of bounds? true
+  Is GameObject? true
+Brick at (-10, 115)
+  Vals = -10 115 55 25
+  Bounds = java.awt.Rectangle[x=-10,y=115,width=55,height=25]
+  Intersects ball? false, Ball intersects? false
+  Intersects paddle? false, Paddle intersects? false
+  Out of bounds? true
+  Is GameObject? true
+Brick at (-10, 145)
+  Vals = -10 145 55 25
+  Bounds = java.awt.Rectangle[x=-10,y=145,width=55,height=25]
+  Intersects ball? true, Ball intersects? true
+  Intersects paddle? false, Paddle intersects? false
+  Out of bounds? true
+  Is GameObject? true
+Brick at (-10, 175)
+  Vals = -10 175 55 25
+  Bounds = java.awt.Rectangle[x=-10,y=175,width=55,height=25]
+  Intersects ball? false, Ball intersects? false
+  Intersects paddle? false, Paddle intersects? false
+  Out of bounds? true
+  Is GameObject? true
+Brick at (55, -5)
+  Vals = 55 -5 55 25
+  Bounds = java.awt.Rectangle[x=55,y=-5,width=55,height=25]
+  Intersects ball? false, Ball intersects? false
+  Intersects paddle? false, Paddle intersects? false
+  Out of bounds? true
+  Is GameObject? true
+Brick at (55, 25)
+  Vals = 55 25 55 25
+  Bounds = java.awt.Rectangle[x=55,y=25,width=55,height=25]
+  Intersects ball? false, Ball intersects? false
+  Intersects paddle? false, Paddle intersects? false
+  Out of bounds? false
+  Is GameObject? true
+Brick at (55, 55)
+  Vals = 55 55 55 25
+  Bounds = java.awt.Rectangle[x=55,y=55,width=55,height=25]
+  Intersects ball? false, Ball intersects? false
+  Intersects paddle? false, Paddle intersects? false
+  Out of bounds? false
+  Is GameObject? true
+Brick at (55, 85)
+  Vals = 55 85 55 25
+  Bounds = java.awt.Rectangle[x=55,y=85,width=55,height=25]
+  Intersects ball? false, Ball intersects? false
+  Intersects paddle? false, Paddle intersects? false
+  Out of bounds? false
+  Is GameObject? true
+Brick at (55, 115)
+  Vals = 55 115 55 25
+  Bounds = java.awt.Rectangle[x=55,y=115,width=55,height=25]
+  Intersects ball? false, Ball intersects? false
+  Intersects paddle? false, Paddle intersects? false
+  Out of bounds? false
+  Is GameObject? true
+Brick at (55, 145)
+  Vals = 55 145 55 25
+  Bounds = java.awt.Rectangle[x=55,y=145,width=55,height=25]
+  Intersects ball? false, Ball intersects? false
+  Intersects paddle? false, Paddle intersects? false
+  Out of bounds? false
+  Is GameObject? true
+Brick at (55, 175)
+  Vals = 55 175 55 25
+  Bounds = java.awt.Rectangle[x=55,y=175,width=55,height=25]
+  Intersects ball? false, Ball intersects? false
+  Intersects paddle? false, Paddle intersects? false
+  Out of bounds? false
+  Is GameObject? true
+Brick at (120, -5)
+  Vals = 120 -5 55 25
+  Bounds = java.awt.Rectangle[x=120,y=-5,width=55,height=25]
+  Intersects ball? false, Ball intersects? false
+  Intersects paddle? false, Paddle intersects? false
+  Out of bounds? true
+  Is GameObject? true
+Brick at (120, 25)
+  Vals = 120 25 55 25
+  Bounds = java.awt.Rectangle[x=120,y=25,width=55,height=25]
+  Intersects ball? false, Ball intersects? false
+  Intersects paddle? false, Paddle intersects? false
+  Out of bounds? false
+  Is GameObject? true
+Brick at (120, 55)
+  Vals = 120 55 55 25
+  Bounds = java.awt.Rectangle[x=120,y=55,width=55,height=25]
+  Intersects ball? false, Ball intersects? false
+  Intersects paddle? false, Paddle intersects? false
+  Out of bounds? false
+  Is GameObject? true
+Brick at (120, 85)
+  Vals = 120 85 55 25
+  Bounds = java.awt.Rectangle[x=120,y=85,width=55,height=25]
+  Intersects ball? false, Ball intersects? false
+  Intersects paddle? false, Paddle intersects? false
+  Out of bounds? false
+  Is GameObject? true
+Brick at (120, 115)
+  Vals = 120 115 55 25
+  Bounds = java.awt.Rectangle[x=120,y=115,width=55,height=25]
+  Intersects ball? false, Ball intersects? false
+  Intersects paddle? false, Paddle intersects? false
+  Out of bounds? false
+  Is GameObject? true
+Brick at (120, 145)
+  Vals = 120 145 55 25
+  Bounds = java.awt.Rectangle[x=120,y=145,width=55,height=25]
+  Intersects ball? false, Ball intersects? false
+  Intersects paddle? false, Paddle intersects? false
+  Out of bounds? false
+  Is GameObject? true
+Brick at (120, 175)
+  Vals = 120 175 55 25
+  Bounds = java.awt.Rectangle[x=120,y=175,width=55,height=25]
+  Intersects ball? false, Ball intersects? false
+  Intersects paddle? false, Paddle intersects? false
+  Out of bounds? false
+  Is GameObject? true
+Brick at (185, -5)
+  Vals = 185 -5 55 25
+  Bounds = java.awt.Rectangle[x=185,y=-5,width=55,height=25]
+  Intersects ball? false, Ball intersects? false
+  Intersects paddle? false, Paddle intersects? false
+  Out of bounds? true
+  Is GameObject? true
+Brick at (185, 25)
+  Vals = 185 25 55 25
+  Bounds = java.awt.Rectangle[x=185,y=25,width=55,height=25]
+  Intersects ball? false, Ball intersects? false
+  Intersects paddle? false, Paddle intersects? false
+  Out of bounds? false
+  Is GameObject? true
+Brick at (185, 55)
+  Vals = 185 55 55 25
+  Bounds = java.awt.Rectangle[x=185,y=55,width=55,height=25]
+  Intersects ball? false, Ball intersects? false
+  Intersects paddle? false, Paddle intersects? false
+  Out of bounds? false
+  Is GameObject? true
+Brick at (185, 85)
+  Vals = 185 85 55 25
+  Bounds = java.awt.Rectangle[x=185,y=85,width=55,height=25]
+  Intersects ball? false, Ball intersects? false
+  Intersects paddle? false, Paddle intersects? false
+  Out of bounds? false
+  Is GameObject? true
+Brick at (185, 115)
+  Vals = 185 115 55 25
+  Bounds = java.awt.Rectangle[x=185,y=115,width=55,height=25]
+  Intersects ball? false, Ball intersects? false
+  Intersects paddle? false, Paddle intersects? false
+  Out of bounds? false
+  Is GameObject? true
+Brick at (185, 145)
+  Vals = 185 145 55 25
+  Bounds = java.awt.Rectangle[x=185,y=145,width=55,height=25]
+  Intersects ball? false, Ball intersects? false
+  Intersects paddle? true, Paddle intersects? true
+  Out of bounds? false
+  Is GameObject? true
+Brick at (185, 175)
+  Vals = 185 175 55 25
+  Bounds = java.awt.Rectangle[x=185,y=175,width=55,height=25]
+  Intersects ball? false, Ball intersects? false
+  Intersects paddle? true, Paddle intersects? true
+  Out of bounds? false
+  Is GameObject? true
+Brick at (250, -5)
+  Vals = 250 -5 55 25
+  Bounds = java.awt.Rectangle[x=250,y=-5,width=55,height=25]
+  Intersects ball? false, Ball intersects? false
+  Intersects paddle? false, Paddle intersects? false
+  Out of bounds? true
+  Is GameObject? true
+Brick at (250, 25)
+  Vals = 250 25 55 25
+  Bounds = java.awt.Rectangle[x=250,y=25,width=55,height=25]
+  Intersects ball? false, Ball intersects? false
+  Intersects paddle? false, Paddle intersects? false
+  Out of bounds? true
+  Is GameObject? true
+Brick at (250, 55)
+  Vals = 250 55 55 25
+  Bounds = java.awt.Rectangle[x=250,y=55,width=55,height=25]
+  Intersects ball? false, Ball intersects? false
+  Intersects paddle? false, Paddle intersects? false
+  Out of bounds? true
+  Is GameObject? true
+Brick at (250, 85)
+  Vals = 250 85 55 25
+  Bounds = java.awt.Rectangle[x=250,y=85,width=55,height=25]
+  Intersects ball? false, Ball intersects? false
+  Intersects paddle? false, Paddle intersects? false
+  Out of bounds? true
+  Is GameObject? true
+Brick at (250, 115)
+  Vals = 250 115 55 25
+  Bounds = java.awt.Rectangle[x=250,y=115,width=55,height=25]
+  Intersects ball? false, Ball intersects? false
+  Intersects paddle? false, Paddle intersects? false
+  Out of bounds? true
+  Is GameObject? true
+Brick at (250, 145)
+  Vals = 250 145 55 25
+  Bounds = java.awt.Rectangle[x=250,y=145,width=55,height=25]
+  Intersects ball? false, Ball intersects? false
+  Intersects paddle? false, Paddle intersects? false
+  Out of bounds? true
+  Is GameObject? true
+Brick at (250, 175)
+  Vals = 250 175 55 25
+  Bounds = java.awt.Rectangle[x=250,y=175,width=55,height=25]
+  Intersects ball? false, Ball intersects? false
+  Intersects paddle? false, Paddle intersects? false
+  Out of bounds? true
+  Is GameObject? true
