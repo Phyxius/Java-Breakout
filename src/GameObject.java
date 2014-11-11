@@ -48,6 +48,8 @@ public abstract class GameObject implements Object2D {
      * @return true if they intersect, false otherwise
      */
     public boolean intersects(GameObject other) {
+        if (!intersects((Object2D)other))
+            return false;
         Area intersection = new Area(getBoundingArea());
         intersection.intersect(other.getBoundingArea());
         return !intersection.isEmpty();
