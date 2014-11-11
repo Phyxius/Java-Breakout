@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ab1da0eb-6323-4ca2-be23-da9999edf297" name="Default" comment="" />
+    <list default="true" id="ab1da0eb-6323-4ca2-be23-da9999edf297" name="Default" comment="Fixed EventManager classes&#10;Added update and draw methods to GameObject&#10;Added update and draw methods to GameManager">
+      <change type="DELETED" beforePath="C:\Users\Shea\Dropbox\School\UNM\Freshman year\CS 251\Labs\Lab 9\out\production\Lab 8\Brick.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="C:\Users\Shea\Dropbox\School\UNM\Freshman year\CS 251\Labs\Lab 9\out\production\Lab 8\GameArea.class" afterPath="$PROJECT_DIR$/out/production/Lab 8/GameArea.class" />
+      <change type="MODIFICATION" beforePath="C:\Users\Shea\Dropbox\School\UNM\Freshman year\CS 251\Labs\Lab 9\out\production\Lab 8\GameObject.class" afterPath="$PROJECT_DIR$/out/production/Lab 8/GameObject.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DrawingManager.java" afterPath="$PROJECT_DIR$/src/DrawingManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/EventManager.java" afterPath="$PROJECT_DIR$/src/EventManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GameManager.java" afterPath="$PROJECT_DIR$/src/GameManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GameObject.java" afterPath="$PROJECT_DIR$/src/GameObject.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Lab 8/testoutput.txt" afterPath="$PROJECT_DIR$/out/production/Lab 8/testoutput.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="Lab 8.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -29,18 +40,93 @@
       <file leaf-file-name="GameObject.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/GameObject.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6979866" vertical-offset="2076" max-vertical-offset="2997">
-              <caret line="117" column="30" selection-start-line="117" selection-start-column="30" selection-end-line="117" selection-end-column="30" />
+            <state vertical-scroll-proportion="0.2414966" vertical-offset="2369" max-vertical-offset="3321">
+              <caret line="108" column="7" selection-start-line="108" selection-start-column="7" selection-end-line="108" selection-end-column="7" />
+              <folding>
+                <element signature="e#3105#3106#0" expanded="true" />
+                <element signature="e#3140#3141#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GameManager.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/GameManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="861" max-vertical-offset="2133">
+              <caret line="46" column="17" selection-start-line="46" selection-start-column="17" selection-end-line="46" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Paddle.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Paddle.java">
+      <file leaf-file-name="DrawingManager.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/DrawingManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="567" max-vertical-offset="729">
-              <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="378">
+              <caret line="3" column="48" selection-start-line="3" selection-start-column="48" selection-end-line="3" selection-end-column="48" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UpdateManager.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/UpdateManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="27" max-vertical-offset="621">
+              <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
+              <folding>
+                <element signature="e#156#157#0" expanded="true" />
+                <element signature="e#186#187#0" expanded="true" />
+                <element signature="e#228#229#0" expanded="true" />
+                <element signature="e#263#264#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EventManager.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/EventManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="756">
+              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+              <folding>
+                <element signature="e#344#345#0" expanded="false" />
+                <element signature="e#399#400#0" expanded="false" />
+                <element signature="e#437#438#0" expanded="false" />
+                <element signature="e#493#494#0" expanded="false" />
+                <element signature="e#540#541#0" expanded="false" />
+                <element signature="e#601#602#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BasicGameArea.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/BasicGameArea.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="729">
+              <caret line="3" column="47" selection-start-line="3" selection-start-column="47" selection-end-line="3" selection-end-column="47" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GameArea.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/GameArea.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="513">
+              <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Object2D.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Object2D.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="81" max-vertical-offset="1107">
+              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -56,16 +142,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Brick.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Brick.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="27" max-vertical-offset="729">
-              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindManager">
@@ -73,9 +149,18 @@
       <setting name="OPEN_NEW_TAB" value="true" />
     </FindUsagesManager>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/src/BasicGameArea.java" />
+        <option value="$PROJECT_DIR$/src/GameArea.java" />
+        <option value="$PROJECT_DIR$/src/UpdateManager.java" />
+        <option value="$PROJECT_DIR$/src/GameManager.java" />
+        <option value="$PROJECT_DIR$/src/EventManager.java" />
+        <option value="$PROJECT_DIR$/src/DrawingManager.java" />
         <option value="$PROJECT_DIR$/src/GameObject.java" />
       </list>
     </option>
@@ -198,7 +283,7 @@
       </profile-state>
     </entry>
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
@@ -225,7 +310,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -236,6 +320,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -245,7 +330,7 @@
     <property name="MemberChooser.sorted" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="MemberChooser.copyJavadoc" value="false" />
-    <property name="options.lastSelected" value="editing.templates" />
+    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
@@ -256,6 +341,12 @@
     <property name="recentsLimit" value="5" />
     <property name="dynamic.classpath" value="false" />
     <property name="FullScreen" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="" />
+    </key>
   </component>
   <component name="RunManager" selected="Application.TestDriver">
     <configuration default="true" type="Remote" factoryName="Remote">
@@ -379,6 +470,22 @@
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
       <method />
     </configuration>
+    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <method />
+    </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
       <module name="" />
       <option name="MAIN_CLASS_NAME" />
@@ -390,6 +497,10 @@
       <option name="VM_PARAMETERS" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JarApplication" factoryName="JAR Application">
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -404,6 +515,9 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="" />
       <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <method />
     </configuration>
     <configuration default="false" name="TestDriver" type="Application" factoryName="Application" nameIsGenerated="true">
@@ -467,19 +581,52 @@
       <workItem from="1415643561432" duration="27000" />
       <workItem from="1415643625732" duration="1608000" />
       <workItem from="1415728894733" duration="113000" />
+      <workItem from="1415729225313" duration="2987000" />
     </task>
+    <task id="LOCAL-00001" summary="Added BasicGameArea class">
+      <created>1415730598500</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1415730598500</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Added default rectangle method to GameArea">
+      <created>1415730622643</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1415730622643</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Optimized intersects(GameObject)&#10;by adding rectangle boundingbox sanity checks">
+      <created>1415730687685</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1415730687685</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Added event manager classes to prevent objects from doing things they shouldn't when they shouldn't">
+      <created>1415731495385</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1415731495385</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Added GameManager class&#10;Added event manager classes to prevent objects from doing things they shouldn't when they shouldn't">
+      <created>1415731592166</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1415731592166</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10795000" />
+    <option name="totallyTimeSpent" value="13782000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1102" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32867885" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -490,6 +637,7 @@
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24973147" sideWeight="0.49946293" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32975295" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24973147" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -498,10 +646,8 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32914287" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32914287" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -519,6 +665,13 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
+    <MESSAGE value="Added BasicGameArea class" />
+    <MESSAGE value="Added default rectangle method to GameArea" />
+    <MESSAGE value="Optimized intersects(GameObject)&#10;by adding rectangle boundingbox sanity checks" />
+    <MESSAGE value="Added event manager classes to prevent objects from doing things they shouldn't when they shouldn't" />
+    <MESSAGE value="Added GameManager class&#10;Added event manager classes to prevent objects from doing things they shouldn't when they shouldn't" />
+    <MESSAGE value="Fixed EventManager classes&#10;Added update and draw methods to GameObject&#10;Added update and draw methods to GameManager" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed EventManager classes&#10;Added update and draw methods to GameObject&#10;Added update and draw methods to GameManager" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -529,22 +682,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/GameObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2997">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Paddle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="567" max-vertical-offset="729">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Ball.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="54" max-vertical-offset="702">
@@ -565,39 +702,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1323" max-vertical-offset="2997">
           <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Paddle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="729">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Ball.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="54" max-vertical-offset="702">
-          <caret line="2" column="3" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Brick.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="27" max-vertical-offset="729">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GameObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1323" max-vertical-offset="2997">
-          <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#3105#3106#0" expanded="true" />
+            <element signature="e#3140#3141#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -629,7 +737,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3456">
           <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#3105#3106#0" expanded="true" />
+            <element signature="e#3140#3141#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -661,7 +772,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2376">
           <caret line="32" column="7" selection-start-line="32" selection-start-column="7" selection-end-line="32" selection-end-column="7" />
-          <folding />
+          <folding>
+            <element signature="e#3105#3106#0" expanded="true" />
+            <element signature="e#3140#3141#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -693,7 +807,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1026" max-vertical-offset="2376">
           <caret line="40" column="7" selection-start-line="40" selection-start-column="7" selection-end-line="52" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#3105#3106#0" expanded="true" />
+            <element signature="e#3140#3141#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -725,7 +842,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2376">
           <caret line="80" column="5" selection-start-line="80" selection-start-column="5" selection-end-line="80" selection-end-column="5" />
-          <folding />
+          <folding>
+            <element signature="e#3105#3106#0" expanded="true" />
+            <element signature="e#3140#3141#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -773,7 +893,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1080" max-vertical-offset="2430">
           <caret line="40" column="26" selection-start-line="40" selection-start-column="26" selection-end-line="40" selection-end-column="26" />
-          <folding />
+          <folding>
+            <element signature="e#3105#3106#0" expanded="true" />
+            <element signature="e#3140#3141#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -805,7 +928,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1080" max-vertical-offset="2430">
           <caret line="40" column="26" selection-start-line="40" selection-start-column="26" selection-end-line="40" selection-end-column="26" />
-          <folding />
+          <folding>
+            <element signature="e#3105#3106#0" expanded="true" />
+            <element signature="e#3140#3141#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -837,7 +963,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2160">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#3105#3106#0" expanded="true" />
+            <element signature="e#3140#3141#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -867,7 +996,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="108" max-vertical-offset="324">
           <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#3105#3106#0" expanded="true" />
+            <element signature="e#3140#3141#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -875,20 +1007,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.9355609" vertical-offset="6182" max-vertical-offset="7128">
           <caret line="258" column="21" selection-start-line="258" selection-start-column="0" selection-end-line="258" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GameArea.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="351">
-          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Object2D.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1107">
-          <caret line="2" column="27" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
         </state>
       </provider>
     </entry>
@@ -923,11 +1041,90 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Object2D.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="81" max-vertical-offset="1107">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BasicGameArea.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="729">
+          <caret line="3" column="47" selection-start-line="3" selection-start-column="47" selection-end-line="3" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GameArea.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="513">
+          <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GameManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="861" max-vertical-offset="2133">
+          <caret line="46" column="17" selection-start-line="46" selection-start-column="17" selection-end-line="46" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UpdateManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="27" max-vertical-offset="621">
+          <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
+          <folding>
+            <element signature="e#156#157#0" expanded="true" />
+            <element signature="e#186#187#0" expanded="true" />
+            <element signature="e#228#229#0" expanded="true" />
+            <element signature="e#263#264#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/EventManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="756">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding>
+            <element signature="e#344#345#0" expanded="false" />
+            <element signature="e#399#400#0" expanded="false" />
+            <element signature="e#437#438#0" expanded="false" />
+            <element signature="e#493#494#0" expanded="false" />
+            <element signature="e#540#541#0" expanded="false" />
+            <element signature="e#601#602#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_20/jre/lib/rt.jar!/java/lang/Object.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.76731795" vertical-offset="567" max-vertical-offset="1539">
+          <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DrawingManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="378">
+          <caret line="3" column="48" selection-start-line="3" selection-start-column="48" selection-end-line="3" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/GameObject.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6979866" vertical-offset="2076" max-vertical-offset="2997">
-          <caret line="117" column="30" selection-start-line="117" selection-start-column="30" selection-end-line="117" selection-end-column="30" />
-          <folding />
+        <state vertical-scroll-proportion="0.2414966" vertical-offset="2369" max-vertical-offset="3321">
+          <caret line="108" column="7" selection-start-line="108" selection-start-column="7" selection-end-line="108" selection-end-column="7" />
+          <folding>
+            <element signature="e#3105#3106#0" expanded="true" />
+            <element signature="e#3140#3141#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

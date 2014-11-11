@@ -112,6 +112,14 @@ public abstract class GameObject implements Object2D {
                 .contains(getBoundingRectangle()));
     }
 
+    public void update(UpdateManager u) {
+
+    }
+
+    public void draw(Graphics2D g, DrawingManager manager) {
+
+    }
+
     /**
      * Returns the string representation of the object
      * Uses the form "ClassName at (x, y)"

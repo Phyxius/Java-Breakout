@@ -9,10 +9,24 @@ public class GameManager {
     private final List<GameObject> objects = new ArrayList<>(),
             removedObjects = new ArrayList<>(),
             addedObjects = new ArrayList<>();
+    private boolean isDebug = false;
     private final GameArea gameArea;
 
     public GameManager(GameArea gameArea) {
         this.gameArea = gameArea;
+    }
+
+    public GameManager(GameArea gameArea, boolean isDebug) {
+        this(gameArea);
+        this.isDebug = isDebug;
+    }
+
+    public boolean isDebugMode() {
+        return isDebug;
+    }
+
+    public void setDebugMode(boolean mode) {
+        isDebug = mode;
     }
 
     public GameArea getGameArea() {
@@ -22,11 +36,19 @@ public class GameManager {
     public void update() {
         processRemovals();
         processAdditions();
+        UpdateManager manager = new UpdateManager(this);
         for (GameObject o : objects) {
-            o.update();
+            o.update(manager);
         }
         processRemovals();
         processAdditions();
+    }
+
+    public void draw(Graphics2D graphics) {
+        DrawingManager manager = new DrawingManager(this);
+        for(GameObject o : objects) {
+            o.draw(graphics, manager);
+        }
     }
 
     public void remove(GameObject obj) {
