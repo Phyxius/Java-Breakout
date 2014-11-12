@@ -1,5 +1,3 @@
-import java.awt.*;
-
 /**
 * Created by Shea on 11/11/2014.
 */
@@ -16,4 +14,7 @@ public class UpdateManager extends EventManager {
         manager.add(obj);
     }
 
+    public boolean getKeyState(int key) {
+        return manager.getKey(key);
+    }
 }

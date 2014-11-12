@@ -10,10 +10,8 @@ import java.awt.geom.Area;
  */
 public abstract class GameObject implements Object2D {
     protected Area boundingArea;
-
     /**
      * Constructs a new GameObject with a given GameArea and bounding shape
-     * @param area the GameArea used for bounds checking
      * @param boundingArea the bounding Area of the object
      */
     public GameObject(Area boundingArea) {
@@ -23,7 +21,6 @@ public abstract class GameObject implements Object2D {
     /**
      * Constructs a new GameObject with a given GameArea and bounding shape
      * Converts the shape to an Area object for use in collisions
-     * @param area the GameArea used for bounds checking
      * @param boundingShape the bounding shape of the object
      */
     public GameObject(Shape boundingShape) {

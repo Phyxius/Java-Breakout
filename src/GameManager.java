@@ -1,5 +1,8 @@
 import java.awt.*;
-import java.util.ArrayList;
+import java.awt.event.KeyEvent;
+import java.lang.reflect.Field;
+import java.lang.reflect.Modifier;
+import java.util.*;
 import java.util.List;
 
 /**
@@ -9,10 +12,23 @@ public class GameManager {
     private final List<GameObject> objects = new ArrayList<>(),
             removedObjects = new ArrayList<>(),
             addedObjects = new ArrayList<>();
+    private final Map<Integer,Boolean> keys;
     private boolean isDebug = false;
     private final GameArea gameArea;
 
     public GameManager(GameArea gameArea) {
+        keys = new HashMap<>();
+        for (Field f : KeyEvent.class.getDeclaredFields()) {
+            try {
+                if (Modifier.isStatic(f.getModifiers()) &&
+                        f.getType() == int.class) {
+                    keys.put(f.getInt(null), false);
+                }
+            }
+            catch(IllegalAccessException ignore) {
+                //Don't do anything, we only care about public fields anyway
+            }
+        }
         this.gameArea = gameArea;
     }
 
@@ -73,6 +89,14 @@ public class GameManager {
     public void processAdditions() {
         objects.addAll(addedObjects);
         addedObjects.clear();
+    }
+
+    public void setKey(int key, boolean state) {
+        keys.put(key, state);
+    }
+
+    public boolean getKey(int key) {
+        return keys.get(key);
     }
 
     /**
