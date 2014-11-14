@@ -17,4 +17,9 @@ public class Brick extends GameObject {
     public Brick(int x, int y, int width, int height) {
         super(new Rectangle(x, y, width, height));
     }
+
+    @Override
+    public void update(UpdateManager updateManager) {
+
+    }
 }

@@ -1,9 +1,13 @@
+
+
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by Shea on 11/11/2014.
@@ -68,6 +72,8 @@ public class GameManager {
                 graphics.setStroke(new BasicStroke(2));
                 graphics.setColor(Color.GREEN);
                 graphics.draw(o.getBoundingArea());
+                graphics.setColor(Color.PINK);
+                graphics.draw(o.getBoundingRectangle());
             }
         }
     }
