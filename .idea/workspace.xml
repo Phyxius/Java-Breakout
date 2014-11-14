@@ -1,16 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ab1da0eb-6323-4ca2-be23-da9999edf297" name="Default" comment="Added keyboard stuff ot">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Breakout.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/BreakoutGamePanel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/GameWindow.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/KeyboardGameTranslator.java" />
+    <list default="true" id="ab1da0eb-6323-4ca2-be23-da9999edf297" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Lab 8/Brick.class" afterPath="$PROJECT_DIR$/out/production/Lab 8/Brick.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Lab 8/GameObject.class" afterPath="$PROJECT_DIR$/out/production/Lab 8/GameObject.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Brick.java" afterPath="$PROJECT_DIR$/src/Brick.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GameManager.java" afterPath="$PROJECT_DIR$/src/GameManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Lab 8.iws" />
@@ -672,7 +665,7 @@
       <workItem from="1415815107011" duration="2723000" />
       <workItem from="1416003078668" duration="31000" />
       <workItem from="1416003257224" duration="3000" />
-      <workItem from="1416003287598" duration="3435000" />
+      <workItem from="1416003287598" duration="3483000" />
     </task>
     <task id="LOCAL-00001" summary="Added BasicGameArea class">
       <created>1415730598500</created>
@@ -770,11 +763,17 @@
       <option name="project" value="LOCAL" />
       <updated>1415816937648</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Added keyboard stuff to BreakoutGamePanel&#10;Added GameWindow, etc.">
+      <created>1416006764678</created>
+      <option name="number" value="00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1416006764678</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21227000" />
+    <option name="totallyTimeSpent" value="21275000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -840,7 +839,8 @@
     <MESSAGE value="Didn't need DefaultHashMap after all" />
     <MESSAGE value="Added key stuff to variousf classes" />
     <MESSAGE value="Removed old documentation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Removed old documentation" />
+    <MESSAGE value="Added keyboard stuff to BreakoutGamePanel&#10;Added GameWindow, etc." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added keyboard stuff to BreakoutGamePanel&#10;Added GameWindow, etc." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
