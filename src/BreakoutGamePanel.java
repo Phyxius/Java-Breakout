@@ -11,7 +11,9 @@ public class BreakoutGamePanel extends JPanel implements GameArea {
     private Timer timer = new Timer((int)(1f/40*1000), this::update);
     public BreakoutGamePanel() {
         setPreferredSize(new Dimension(800, 600));
-        manager.add(new Brick(100, 100, 10, 20));
+        Brick b = new Brick(100, 100, 10, 20);
+        b.setSpeed(new Point(3, 10));
+        manager.add(b);
         manager.add(new Ball(300, 150, 25));
         addKeyListener(new KeyboardGameTranslator(manager));
         timer.start();

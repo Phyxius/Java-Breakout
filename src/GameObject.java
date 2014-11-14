@@ -10,6 +10,7 @@ import java.awt.geom.Area;
  */
 public abstract class GameObject implements Object2D {
     protected Area boundingArea;
+
     /**
      * Constructs a new GameObject with a given GameArea and bounding shape
      * @param boundingArea the bounding Area of the object
@@ -17,7 +18,6 @@ public abstract class GameObject implements Object2D {
     public GameObject(Area boundingArea) {
         this.boundingArea = boundingArea;
     }
-
     /**
      * Constructs a new GameObject with a given GameArea and bounding shape
      * Converts the shape to an Area object for use in collisions
@@ -25,6 +25,13 @@ public abstract class GameObject implements Object2D {
      */
     public GameObject(Shape boundingShape) {
         this(new Area(boundingShape));
+    }
+
+    /* If you don't manually initialize boundingArea before this, you are going
+    to have a bad time.
+     */
+    public GameObject() {
+        boundingArea = null;
     }
 
     /**
@@ -96,6 +103,14 @@ public abstract class GameObject implements Object2D {
      */
     public Area getBoundingArea() {
         return boundingArea;
+    }
+
+    protected void setBoundingArea(Area boundingArea) {
+        this.boundingArea = boundingArea;
+    }
+
+    protected void setBoundingArea(Shape boundingArea) {
+        this.boundingArea = new Area(boundingArea);
     }
 
     public void update(UpdateManager u) {
