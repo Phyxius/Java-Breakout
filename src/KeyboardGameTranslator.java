@@ -13,11 +13,11 @@ public class KeyboardGameTranslator extends KeyAdapter {
 
     @Override
     public void keyPressed(KeyEvent e) {
-        gameManager.setKey(e.getKeyCode(), true);
+        gameManager.setKeyState(e.getKeyCode(), true);
     }
 
     @Override
     public void keyReleased(KeyEvent e) {
-        gameManager.setKey(e.getKeyCode(), false);
+        gameManager.setKeyState(e.getKeyCode(), false);
     }
 }

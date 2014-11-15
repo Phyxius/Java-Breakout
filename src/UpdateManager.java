@@ -1,3 +1,5 @@
+import java.util.Collection;
+
 /**
 * Created by Shea on 11/11/2014.
 */
@@ -15,6 +17,10 @@ public class UpdateManager extends EventManager {
     }
 
     public boolean getKeyState(int key) {
-        return manager.getKey(key);
+        return manager.getKeyState(key);
+    }
+
+    public Collection<GameObject> getAllObjects() {
+        return manager.getAllObjects();
     }
 }

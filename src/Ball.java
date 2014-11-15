@@ -9,7 +9,6 @@ import java.awt.geom.Ellipse2D;
 public class Ball extends GameObject {
     /**
      * Constructs a new Ball with given parameters
-     * @param area the GameArea to use for bounds checking
      * @param x the leftmost x value of the ball
      * @param y the uppermost y value of the ball
      * @param diameter the diameter of the ball

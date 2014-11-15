@@ -4,10 +4,8 @@ import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
-import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.*;
 import java.util.List;
-import java.util.Map;
 
 /**
  * Created by Shea on 11/11/2014.
@@ -97,11 +95,11 @@ public class GameManager {
         addedObjects.clear();
     }
 
-    public void setKey(int key, boolean state) {
+    public void setKeyState(int key, boolean state) {
         keys.put(key, state);
     }
 
-    public boolean getKey(int key) {
+    public boolean getKeyState(int key) {
         return keys.get(key);
     }
 
@@ -115,4 +113,7 @@ public class GameManager {
         return !gameArea.getAsRectangle().contains(obj.getBoundingRectangle());
     }
 
+    public Collection<GameObject> getAllObjects() {
+        return new ArrayList<>(objects);
+    }
 }

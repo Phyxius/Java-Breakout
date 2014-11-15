@@ -94,7 +94,7 @@ public abstract class GameObject implements Object2D {
      * @return the bounding rectangle
      */
     public Rectangle getBoundingRectangle() {
-        return boundingArea.getBounds();
+        return getBoundingArea().getBounds();
     }
 
     /**
@@ -117,6 +117,7 @@ public abstract class GameObject implements Object2D {
 
     }
 
+    @SuppressWarnings("EmptyMethod")
     public void draw(Graphics2D g, DrawingManager manager) {
 
     }
