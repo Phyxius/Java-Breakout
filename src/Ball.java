@@ -58,5 +58,8 @@ public class Ball extends GameObject implements MovableObject {
         if (newYPos != unclampedNewYPos) {
             ySpeed *= -1;
         }
+
+        ellipse.x = newXPos;
+        ellipse.y = newYPos;
     }
 }

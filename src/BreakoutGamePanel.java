@@ -13,6 +13,9 @@ public class BreakoutGamePanel extends JPanel implements GameArea {
         setPreferredSize(new Dimension(800, 600));
         setFocusable(true);
         manager.add(new Paddle(getWidth()/2, 590, 100, 10));
+        Ball b = new Ball(400, 300, 20);
+        b.setSpeed(new Point(1, 3));
+        manager.add(b);
         addKeyListener(new KeyboardGameTranslator(manager));
         timer.start();
     }
