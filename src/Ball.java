@@ -1,5 +1,6 @@
 import java.awt.geom.Area;
 import java.awt.geom.Ellipse2D;
+import java.util.function.IntConsumer;
 
 /**
  * Copyright 2014 Shea Polansky
@@ -8,8 +9,13 @@ import java.awt.geom.Ellipse2D;
  * Usage: None, used by Brooke's TestDriver class
  */
 public class Ball extends GameObject implements MovableObject {
+    private static final int MAX_STARTING_X_SPEED = 5,
+        MAX_STARTING_Y_SPEED = 5, MIN_STARTING_X_SPEED = 3,
+        MIN_STARTING_Y_SPEED = 3;
+    private final IntConsumer scoreCallback;
     private Ellipse2D.Double ellipse;
     private int xSpeed = 0, ySpeed = 0;
+    private IntConsumer livesCallback;
 
     /**
      * Constructs a new Ball with given parameters
@@ -18,9 +24,12 @@ public class Ball extends GameObject implements MovableObject {
      * @param y        the uppermost y value of the ball
      * @param diameter the diameter of the ball
      */
-    public Ball(int x, int y, int diameter) {
+    public Ball(int x, int y, int diameter, IntConsumer livesCallback,
+                IntConsumer scoreCallback) {
         super(null);
         ellipse = new Ellipse2D.Double(x, y, diameter, diameter);
+        this.scoreCallback = scoreCallback;
+        this.livesCallback = livesCallback;
     }
 
     public int getXSpeed() {
@@ -56,10 +65,32 @@ public class Ball extends GameObject implements MovableObject {
             xSpeed *= -1;
         }
         if (newYPos != unclampedNewYPos) {
-            ySpeed *= -1;
+            if (newYPos < unclampedNewYPos) { //bounced off bottom of game area
+                livesCallback.accept(-1);
+                newXPos = updateManager.getGameAreaWidth() / 2;
+                newYPos = updateManager.getGameAreaHeight() / 2;
+                xSpeed = Util.getRandomInRange(MIN_STARTING_X_SPEED,
+                        MAX_STARTING_X_SPEED, true);
+                ySpeed = Util.getRandomInRange(MIN_STARTING_Y_SPEED,
+                        MAX_STARTING_Y_SPEED, false);
+            }
+            else {
+                ySpeed *= -1;
+            }
         }
 
         ellipse.x = newXPos;
         ellipse.y = newYPos;
+    }
+
+    @Override
+    public void onIntersect(GameObject other, CollisionManager manager) {
+        if (other.getClass().equals(Paddle.class) && getYSpeed() > 0) {
+            setYSpeed(-getYSpeed());
+        }
+        else if (other.getClass().equals(Brick.class)) {
+            manager.remove(other);
+            scoreCallback.accept(((Brick)other).getWorth());
+        }
     }
 }

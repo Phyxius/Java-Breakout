@@ -17,7 +17,6 @@ public class Brick extends GameObject implements MovableObject {
      * @param height the height of the paddle
      */
     public Brick(int x, int y, int width, int height) {
-        super();
         rect = new Rectangle(x, y, width, height);
         setBoundingArea(rect);
     }
@@ -42,5 +41,9 @@ public class Brick extends GameObject implements MovableObject {
     public void update(UpdateManager updateManager) {
         rect.translate(getXSpeed(), getYSpeed());
         setBoundingArea(rect);
+    }
+
+    public int getWorth() {
+        return 10;
     }
 }

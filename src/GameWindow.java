@@ -8,18 +8,20 @@ import java.awt.event.ActionEvent;
 public class GameWindow extends JFrame {
     JLabel scoreLabel = new JLabel("0 Points"),
         livesLabel = new JLabel(BreakoutGamePanel.STARTING_LIVES + " lives");
-    BreakoutGamePanel gamePanel = new BreakoutGamePanel();
+    BreakoutGamePanel gamePanel;
     public GameWindow() {
         super("Breakout");
         setLayout(new BorderLayout());
+        GameControlPanel controlPanel = new GameControlPanel();
+        add(controlPanel, BorderLayout.LINE_END);
+        gamePanel = new BreakoutGamePanel(controlPanel);
         add(gamePanel);
-        add(new GameControlPanel(), BorderLayout.LINE_END);
         pack();
         setResizable(false);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
-    private class GameControlPanel extends JPanel {
+    public class GameControlPanel extends JPanel {
         private final String PAUSE_TEXT = "Pause";
         private final String UNPAUSE_TEXT = "Unpause";
         private final String START_TEXT = "Start Game";
@@ -43,6 +45,14 @@ public class GameWindow extends JFrame {
                             UNPAUSE_TEXT : PAUSE_TEXT
             );
             gamePanel.togglePause();
+        }
+
+        public void setLives(int lives) {
+            livesLabel.setText(lives + " lives");
+        }
+
+        public void setScore(int score) {
+            scoreLabel.setText(score + " points");
         }
     }
 }

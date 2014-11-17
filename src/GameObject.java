@@ -122,6 +122,10 @@ public abstract class GameObject implements Object2D {
 
     }
 
+    public void onIntersect(GameObject other, CollisionManager manager) {
+
+    }
+
     /**
      * Returns the string representation of the object
      * Uses the form "ClassName at (x, y)"

@@ -52,14 +52,18 @@ public class GameManager {
     }
 
     public void update() {
-        processRemovals();
-        processAdditions();
-        UpdateManager manager = new UpdateManager(this);
+        processEntityListChanges();
+        UpdateManager updateManager = new UpdateManager(this);
         for (GameObject o : objects) {
-            o.update(manager);
+            o.update(updateManager);
         }
-        processRemovals();
-        processAdditions();
+        processEntityListChanges();
+        CollisionManager collisionManager = new CollisionManager(this);
+        for (GameObject i : objects) {
+            objects.stream().filter(j -> i != j && i.intersects(j))
+                    .forEach(j -> i.onIntersect(j, collisionManager));
+        }
+        processEntityListChanges();
     }
 
     public void draw(Graphics2D graphics) {
@@ -80,18 +84,14 @@ public class GameManager {
         removedObjects.add(obj);
     }
 
-    private void processRemovals()
-    {
-        objects.removeAll(removedObjects);
-        removedObjects.clear();
-    }
-
     public void add(GameObject obj) {
         addedObjects.add(obj);
     }
 
-    public void processAdditions() {
+    public void processEntityListChanges() {
+        objects.removeAll(removedObjects);
         objects.addAll(addedObjects);
+        removedObjects.clear();
         addedObjects.clear();
     }
 
