@@ -17,9 +17,14 @@ public class GameManager {
     private final Map<Integer,Boolean> keys;
     private boolean isDebug = false;
     private final GameArea gameArea;
+    private int lives = 0, score = 0;
 
     public GameManager(GameArea gameArea) {
         keys = new HashMap<>();
+        /*
+        pre-populate the keys map with false for every key constant
+        saves from having to check for map key existence later
+        */
         for (Field f : KeyEvent.class.getDeclaredFields()) {
             try {
                 if (Modifier.isStatic(f.getModifiers()) &&
@@ -115,5 +120,21 @@ public class GameManager {
 
     public Collection<GameObject> getAllObjects() {
         return new ArrayList<>(objects);
+    }
+
+    public void modifyScore(int amount) {
+        score += amount;
+    }
+
+    public void setScore(int amount) {
+        score = amount;
+    }
+
+    public void modifyLives(int amount) {
+        lives += amount;
+    }
+
+    public void setLives(int amount) {
+        lives = amount;
     }
 }
