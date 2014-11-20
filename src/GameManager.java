@@ -6,6 +6,7 @@ import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
 import java.util.*;
 import java.util.List;
+import java.util.function.IntConsumer;
 
 /**
  * Created by Shea on 11/11/2014.
@@ -18,11 +19,13 @@ public class GameManager {
     private boolean isDebug = false;
     private final GameArea gameArea;
     private int lives = 0, score = 0;
+    private final IntConsumer scoreChangedCallback, livesChangedCallback;
 
-    public GameManager(GameArea gameArea) {
+    public GameManager(GameArea gameArea, IntConsumer scoreChangedCallback,
+                       IntConsumer livesChangedCallback) {
         keys = new HashMap<>();
         /*
-        pre-populate the keys map with false for every key constant
+        pre-populate the keys map with false for every key constant;
         saves from having to check for map key existence later
         */
         for (Field f : KeyEvent.class.getDeclaredFields()) {
@@ -37,10 +40,13 @@ public class GameManager {
             }
         }
         this.gameArea = gameArea;
+        this.scoreChangedCallback = scoreChangedCallback;
+        this.livesChangedCallback = livesChangedCallback;
     }
 
-    public GameManager(GameArea gameArea, boolean isDebug) {
-        this(gameArea);
+    public GameManager(GameArea gameArea, IntConsumer scoreChangedCallback,
+                       IntConsumer livesChangedCallback, boolean isDebug) {
+        this(gameArea, scoreChangedCallback, livesChangedCallback);
         this.isDebug = isDebug;
     }
 
@@ -75,7 +81,9 @@ public class GameManager {
         DrawingManager manager = new DrawingManager(this);
         for(GameObject o : objects) {
             o.draw(graphics, manager);
-            if (isDebugMode()) {
+        }
+        if (isDebugMode()) {
+            for (GameObject o : objects) {
                 graphics.setStroke(new BasicStroke(2));
                 graphics.setColor(Color.GREEN);
                 graphics.draw(o.getBoundingArea());
@@ -124,17 +132,21 @@ public class GameManager {
 
     public void modifyScore(int amount) {
         score += amount;
+        scoreChangedCallback.accept(score);
     }
 
     public void setScore(int amount) {
         score = amount;
+        scoreChangedCallback.accept(score);
     }
 
     public void modifyLives(int amount) {
         lives += amount;
+        livesChangedCallback.accept(lives);
     }
 
     public void setLives(int amount) {
         lives = amount;
+        livesChangedCallback.accept(lives);
     }
 }

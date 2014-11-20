@@ -1,6 +1,5 @@
 import java.awt.geom.Area;
 import java.awt.geom.Ellipse2D;
-import java.util.function.IntConsumer;
 
 /**
  * Copyright 2014 Shea Polansky
@@ -12,10 +11,8 @@ public class Ball extends GameObject implements MovableObject {
     private static final int MAX_STARTING_X_SPEED = 5,
         MAX_STARTING_Y_SPEED = 5, MIN_STARTING_X_SPEED = 3,
         MIN_STARTING_Y_SPEED = 3;
-    private final IntConsumer scoreCallback;
     private Ellipse2D.Double ellipse;
     private int xSpeed = 0, ySpeed = 0;
-    private IntConsumer livesCallback;
 
     /**
      * Constructs a new Ball with given parameters
@@ -24,12 +21,9 @@ public class Ball extends GameObject implements MovableObject {
      * @param y        the uppermost y value of the ball
      * @param diameter the diameter of the ball
      */
-    public Ball(int x, int y, int diameter, IntConsumer livesCallback,
-                IntConsumer scoreCallback) {
+    public Ball(int x, int y, int diameter) {
         super(null);
         ellipse = new Ellipse2D.Double(x, y, diameter, diameter);
-        this.scoreCallback = scoreCallback;
-        this.livesCallback = livesCallback;
     }
 
     public int getXSpeed() {
@@ -66,7 +60,7 @@ public class Ball extends GameObject implements MovableObject {
         }
         if (newYPos != unclampedNewYPos) {
             if (newYPos < unclampedNewYPos) { //bounced off bottom of game area
-                livesCallback.accept(-1);
+                updateManager.modifyLives(-1);
                 newXPos = updateManager.getGameAreaWidth() / 2;
                 newYPos = updateManager.getGameAreaHeight() / 2;
                 xSpeed = Util.getRandomInRange(MIN_STARTING_X_SPEED,
@@ -89,8 +83,18 @@ public class Ball extends GameObject implements MovableObject {
             setYSpeed(-getYSpeed());
         }
         else if (other.getClass().equals(Brick.class)) {
+            Brick otherBrick = (Brick) other;
             manager.remove(other);
-            scoreCallback.accept(((Brick)other).getWorth());
+            manager.modifyScore(otherBrick.getWorth());
+            if (getBoundingRectangle().getY() >
+                    otherBrick.getBoundingRectangle().getMaxY()
+                    || otherBrick.getBoundingRectangle().getY() >
+                        getBoundingRectangle().getMaxY()) {
+                xSpeed *= -1;
+            }
+            else {
+                ySpeed *= -1;
+            } //TODO: Make bouncing actually work
         }
     }
 }
