@@ -1,3 +1,4 @@
+import java.awt.*;
 import java.awt.geom.Area;
 import java.awt.geom.Ellipse2D;
 
@@ -17,13 +18,14 @@ public class Ball extends GameObject implements MovableObject {
     /**
      * Constructs a new Ball with given parameters
      *
-     * @param x        the leftmost x value of the ball
-     * @param y        the uppermost y value of the ball
+     * @param x        the center x value of the ball
+     * @param y        the center y value of the ball
      * @param diameter the diameter of the ball
      */
     public Ball(int x, int y, int diameter) {
         super(null);
-        ellipse = new Ellipse2D.Double(x, y, diameter, diameter);
+        ellipse = new Ellipse2D.Double(x + diameter / 2, y + diameter / 2,
+                diameter, diameter);
     }
 
     public int getXSpeed() {
@@ -83,18 +85,40 @@ public class Ball extends GameObject implements MovableObject {
             setYSpeed(-getYSpeed());
         }
         else if (other.getClass().equals(Brick.class)) {
-            Brick otherBrick = (Brick) other;
-            manager.remove(other);
-            manager.modifyScore(otherBrick.getWorth());
-            if (getBoundingRectangle().getY() >
-                    otherBrick.getBoundingRectangle().getMaxY()
-                    || otherBrick.getBoundingRectangle().getY() >
-                        getBoundingRectangle().getMaxY()) {
-                xSpeed *= -1;
+            Brick otherBrick = (Brick)other;
+            Rectangle otherRect = otherBrick.getBoundingRectangle();
+            int collisionTestX = (int)(ellipse.getCenterX() +
+                    Math.signum(xSpeed) * ellipse.width / 2);
+            int collisionTestY = (int)(ellipse.getCenterY() +
+                Math.signum(ySpeed) * ellipse.height / 2);
+            if (collisionTestX < otherRect.getCenterX()) { //left of other
+                xSpeed = Math.abs(xSpeed);
             }
-            else {
-                ySpeed *= -1;
-            } //TODO: Make bouncing actually work
+            else if (collisionTestX >= otherRect.getCenterX()) { //right
+                //allow equal to catch the corner case where it is in the
+                //exact center
+                xSpeed = -Math.abs(xSpeed);
+            }
+            else if (collisionTestY < otherRect.getCenterY()) { //above
+                ySpeed = -Math.abs(ySpeed);
+            }
+            else if (collisionTestY >= otherRect.getCenterY()) { //below
+                //see right comment
+                ySpeed = Math.abs(ySpeed);
+            }
+            manager.modifyScore(otherBrick.getWorth());
+            manager.remove(other);
+            //TODO: Make bouncing actually work
         }
+    }
+
+    @Override
+    public int getX() {
+        return (int)getBoundingRectangle().getCenterX();
+    }
+
+    @Override
+    public int getY() {
+        return (int)getBoundingRectangle().getCenterY();
     }
 }
