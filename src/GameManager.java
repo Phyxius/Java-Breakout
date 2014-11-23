@@ -101,6 +101,22 @@ public class GameManager {
         addedObjects.add(obj);
     }
 
+    public void addAll(Iterable<GameObject> objs) {
+        objs.forEach(o -> add(o));
+    }
+
+    public void addAll(Collection<GameObject> objs) {
+        addedObjects.addAll(objs);
+    }
+
+    public void removeAll(Iterable<GameObject> objs) {
+        objs.forEach(o -> removedObjects.add(o));
+    }
+
+    public void removeAll(Collection<GameObject> objs) {
+        removedObjects.addAll(objs);
+    }
+
     public void processEntityListChanges() {
         objects.removeAll(removedObjects);
         objects.addAll(addedObjects);

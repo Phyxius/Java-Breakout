@@ -10,7 +10,8 @@ public class BreakoutGamePanel extends JPanel implements GameArea {
     private final GameWindow.GameControlPanel controlPanel;
     private GameManager manager;
     private Timer timer = new Timer((int)(1f/40*1000), this::update);
-    public BreakoutGamePanel(GameWindow.GameControlPanel panel, boolean debug) {
+    public BreakoutGamePanel(GameWindow.GameControlPanel panel, Level level,
+                             boolean debug) {
         controlPanel = panel;
         manager = new GameManager(this, controlPanel::setScore,
                 controlPanel::setLives, debug);
@@ -21,11 +22,7 @@ public class BreakoutGamePanel extends JPanel implements GameArea {
         Ball b = new Ball(400, 300, 20);
         b.setSpeed(new Point(1, 3));
         manager.add(b);
-        for (int i = 0; i < 10; i++) {
-            for (int j = 0; j < 10; j++) {
-                manager.add(new Brick(i*80, j * 30,40, 20));
-            }
-        }
+        manager.addAll(level.createObjects());
         addKeyListener(new KeyboardGameTranslator(manager));
     }
 

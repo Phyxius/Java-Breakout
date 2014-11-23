@@ -7,7 +7,13 @@ import java.awt.*;
  * Usage: None, used by Brooke's TestDriver class
  */
 public class Brick extends GameObject implements MovableObject {
+    private static final float[] HIT_NUMBER_HUES = {
+            0, 60f/360, 180f/360, 240f/360, 300f/360, 120f/360,
+    };
+    private final int RECTANGLE_SPACING = 2;
+    private int hits;
     private Rectangle rect;
+    private final int value;
     private int xSpeed = 0, ySpeed = 0;
     /**
      * Constructs a new Brick with given parameters
@@ -15,10 +21,19 @@ public class Brick extends GameObject implements MovableObject {
      * @param y the uppermost y of the paddle
      * @param width the width of the paddle
      * @param height the height of the paddle
+     * @param hits the number of hits to destroy the brick
      */
-    public Brick(int x, int y, int width, int height) {
+    public Brick(int x, int y, int width, int height, int hits, int value) {
+        this.hits = hits;
+        this.value = value;
         rect = new Rectangle(x, y, width, height);
         setBoundingArea(rect);
+    }
+    public Brick(int x, int y, int width, int height, int hits) {
+        this(x, y, width, height, hits, hits * 100);
+    }
+    public Brick(int x, int y, int width, int height) {
+        this(x, y, width, height, 1);
     }
 
     public int getXSpeed() {
@@ -43,7 +58,47 @@ public class Brick extends GameObject implements MovableObject {
         setBoundingArea(rect);
     }
 
+    @Override
+    public void onIntersect(GameObject other, CollisionManager manager) {
+        if (other.getClass() == Ball.class) {
+            if (hits > 0) {
+                hits--;
+                if (hits < 1) {
+                    manager.remove(this);
+                    manager.modifyScore(getWorth());
+                }
+                else {
+                    manager.modifyScore(10);
+                }
+            }
+            else {
+                manager.modifyScore(getWorth());
+            }
+        }
+    }
+
+    @Override
+    public void draw(Graphics2D g, DrawingManager manager) {
+        int level = 0;
+        for(; level < hits / HIT_NUMBER_HUES.length; level++) {
+            g.setColor(Color.getHSBColor(
+                    HIT_NUMBER_HUES[HIT_NUMBER_HUES.length - 1], 1,
+                    1 - level * .2f));
+            g.fillRect(getX() + level * RECTANGLE_SPACING,
+                    getY() + level * RECTANGLE_SPACING,
+                    getWidth() - level * RECTANGLE_SPACING,
+                    getHeight() - level * RECTANGLE_SPACING);
+        }
+        g.setColor(Color.getHSBColor(
+                HIT_NUMBER_HUES[hits % HIT_NUMBER_HUES.length], 1,
+                1 - level * .2f));
+        g.fillRect(getX() + level * RECTANGLE_SPACING,
+                getY() + level * RECTANGLE_SPACING,
+                getWidth() - level * RECTANGLE_SPACING,
+                getHeight() - level * RECTANGLE_SPACING);
+    }
+
     public int getWorth() {
-        return 10;
+        return value;
     }
 }

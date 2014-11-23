@@ -9,12 +9,12 @@ public class GameWindow extends JFrame {
     JLabel scoreLabel = new JLabel("0 Points"),
         livesLabel = new JLabel(BreakoutGamePanel.STARTING_LIVES + " lives");
     BreakoutGamePanel gamePanel;
-    public GameWindow(boolean debugMode) {
+    public GameWindow(Level level, boolean debugMode) {
         super("Breakout");
         setLayout(new BorderLayout());
         GameControlPanel controlPanel = new GameControlPanel();
         add(controlPanel, BorderLayout.LINE_END);
-        gamePanel = new BreakoutGamePanel(controlPanel, debugMode);
+        gamePanel = new BreakoutGamePanel(controlPanel, level, debugMode);
         add(gamePanel);
         pack();
         setResizable(false);

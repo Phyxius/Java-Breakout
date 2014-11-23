@@ -103,9 +103,6 @@ public class Ball extends GameObject implements MovableObject {
             else {
                 xSpeed *= -1;
             }
-            manager.modifyScore(otherBrick.getWorth());
-            manager.remove(other);
-            //TODO: Make bouncing actually work
         }
     }
 
