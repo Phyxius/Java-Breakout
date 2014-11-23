@@ -23,7 +23,7 @@ public class BreakoutGamePanel extends JPanel implements GameArea {
         manager.add(b);
         for (int i = 0; i < 10; i++) {
             for (int j = 0; j < 10; j++) {
-                manager.add(new Brick(i*80, j * 80,40, 40));
+                manager.add(new Brick(i*80, j * 30,40, 20));
             }
         }
         addKeyListener(new KeyboardGameTranslator(manager));
