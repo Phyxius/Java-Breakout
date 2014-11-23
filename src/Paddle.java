@@ -43,4 +43,10 @@ public class Paddle extends GameObject {
                     (int)rect.getY());
         }
     }
+
+    @Override
+    public void draw(Graphics2D g, DrawingManager manager) {
+        g.setColor(Color.RED);
+        g.fill(getBoundingArea());
+    }
 }

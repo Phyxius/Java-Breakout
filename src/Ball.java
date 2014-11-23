@@ -115,4 +115,10 @@ public class Ball extends GameObject implements MovableObject {
     public int getY() {
         return (int)getBoundingRectangle().getCenterY();
     }
+
+    @Override
+    public void draw(Graphics2D g, DrawingManager manager) {
+        g.setColor(Color.GREEN);
+        g.fill(getBoundingArea());
+    }
 }

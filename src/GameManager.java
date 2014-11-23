@@ -102,7 +102,7 @@ public class GameManager {
     }
 
     public void addAll(Iterable<GameObject> objs) {
-        objs.forEach(o -> add(o));
+        objs.forEach(this::add);
     }
 
     public void addAll(Collection<GameObject> objs) {
@@ -110,7 +110,7 @@ public class GameManager {
     }
 
     public void removeAll(Iterable<GameObject> objs) {
-        objs.forEach(o -> removedObjects.add(o));
+        objs.forEach(removedObjects::add);
     }
 
     public void removeAll(Collection<GameObject> objs) {
