@@ -4,6 +4,8 @@
 public class Breakout {
     public static void main(String[] args) {
         //TODO: Do threading properly
-        new GameWindow().setVisible(true);
+        new GameWindow(
+                args.length > 0 && args[0].toLowerCase().equals("debug")
+        ).setVisible(true);
     }
 }
