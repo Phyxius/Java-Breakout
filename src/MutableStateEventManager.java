@@ -12,8 +12,24 @@ public class MutableStateEventManager extends EventManager {
         manager.remove(obj);
     }
 
+    public void removeAll(Iterable<GameObject> objs) {
+        manager.removeAll(objs);
+    }
+
+    public void removeAll(Collection<GameObject> objs) {
+        manager.removeAll(objs);
+    }
+
     public void add(GameObject obj) {
         manager.add(obj);
+    }
+
+    public void addAll(Iterable<GameObject> objs) {
+        manager.addAll(objs);
+    }
+
+    public void addAll(Collection<GameObject> objs) {
+        manager.addAll(objs);
     }
 
     public Collection<GameObject> getAllObjects() {
