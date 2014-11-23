@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Random;
 
 /**
@@ -14,5 +15,11 @@ public final class Util {
                                        boolean negativeChance) {
         return (negativeChance && RANDOM.nextBoolean() ? -1 : 1) *
                 (RANDOM.nextInt(max - min + 1) + min);
+    }
+
+    public static int getClosestInt(int target, int... integers) {
+        return Arrays.stream(integers).boxed().sorted(
+                (a, b) -> Integer.compareUnsigned(target - a, target - b))
+                .findFirst().get();
     }
 }

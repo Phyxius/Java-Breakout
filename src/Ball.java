@@ -13,7 +13,7 @@ public class Ball extends GameObject implements MovableObject {
         MAX_STARTING_Y_SPEED = 5, MIN_STARTING_X_SPEED = 3,
         MIN_STARTING_Y_SPEED = 3;
     private Ellipse2D.Double ellipse;
-    private int xSpeed = 0, ySpeed = 0;
+    private int radius, xSpeed = 0, ySpeed = 0;
 
     /**
      * Constructs a new Ball with given parameters
@@ -26,6 +26,7 @@ public class Ball extends GameObject implements MovableObject {
         super(null);
         ellipse = new Ellipse2D.Double(x + diameter / 2, y + diameter / 2,
                 diameter, diameter);
+        radius = diameter / 2;
     }
 
     public int getXSpeed() {
@@ -87,24 +88,20 @@ public class Ball extends GameObject implements MovableObject {
         else if (other.getClass().equals(Brick.class)) {
             Brick otherBrick = (Brick)other;
             Rectangle otherRect = otherBrick.getBoundingRectangle();
-            int collisionTestX = (int)(ellipse.getCenterX() +
-                    Math.signum(xSpeed) * ellipse.width / 2);
-            int collisionTestY = (int)(ellipse.getCenterY() +
-                Math.signum(ySpeed) * ellipse.height / 2);
-            if (collisionTestX < otherRect.getCenterX()) { //left of other
-                xSpeed = Math.abs(xSpeed);
+            double brickCornerX = otherRect.getCenterX() - Math.copySign(
+                    otherRect.getWidth() / 2, xSpeed);
+            double brickCornerY = otherRect.getCenterY() - Math.copySign(
+                    otherRect.getHeight() / 2, ySpeed);
+            double ballCornerX = getBoundingRectangle().getCenterX() +
+                    Math.copySign(radius, xSpeed);
+            double ballCornerY = getBoundingRectangle().getCenterY() +
+                    Math.copySign(radius, ySpeed);
+            if (Math.abs(ballCornerX - brickCornerX) > Math.abs(ballCornerY -
+                brickCornerY)) {
+                ySpeed *= -1;
             }
-            else if (collisionTestX >= otherRect.getCenterX()) { //right
-                //allow equal to catch the corner case where it is in the
-                //exact center
-                xSpeed = -Math.abs(xSpeed);
-            }
-            else if (collisionTestY < otherRect.getCenterY()) { //above
-                ySpeed = -Math.abs(ySpeed);
-            }
-            else if (collisionTestY >= otherRect.getCenterY()) { //below
-                //see right comment
-                ySpeed = Math.abs(ySpeed);
+            else {
+                xSpeed *= -1;
             }
             manager.modifyScore(otherBrick.getWorth());
             manager.remove(other);
