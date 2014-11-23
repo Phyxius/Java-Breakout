@@ -10,10 +10,10 @@ public class BreakoutGamePanel extends JPanel implements GameArea {
     private final GameWindow.GameControlPanel controlPanel;
     private GameManager manager;
     private Timer timer = new Timer((int)(1f/40*1000), this::update);
-    public BreakoutGamePanel(GameWindow.GameControlPanel panel) {
+    public BreakoutGamePanel(GameWindow.GameControlPanel panel, boolean debug) {
         controlPanel = panel;
         manager = new GameManager(this, controlPanel::setScore,
-                controlPanel::setLives, true);
+                controlPanel::setLives, debug);
         manager.setLives(STARTING_LIVES);
         setPreferredSize(new Dimension(800, 600));
         setFocusable(true);
