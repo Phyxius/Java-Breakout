@@ -86,16 +86,16 @@ public class Brick extends GameObject implements MovableObject {
                     1 - level * .2f));
             g.fillRect(getX() + level * RECTANGLE_SPACING,
                     getY() + level * RECTANGLE_SPACING,
-                    getWidth() - level * RECTANGLE_SPACING,
-                    getHeight() - level * RECTANGLE_SPACING);
+                    getWidth() - level * RECTANGLE_SPACING * 2,
+                    getHeight() - level * RECTANGLE_SPACING * 2);
         }
         g.setColor(Color.getHSBColor(
                 HIT_NUMBER_HUES[hits % HIT_NUMBER_HUES.length], 1,
                 1 - level * .2f));
         g.fillRect(getX() + level * RECTANGLE_SPACING,
                 getY() + level * RECTANGLE_SPACING,
-                getWidth() - level * RECTANGLE_SPACING,
-                getHeight() - level * RECTANGLE_SPACING);
+                getWidth() - level * RECTANGLE_SPACING * 2,
+                getHeight() - level * RECTANGLE_SPACING * 2);
     }
 
     public int getWorth() {
