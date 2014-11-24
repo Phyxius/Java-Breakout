@@ -117,6 +117,10 @@ public class GameManager {
         removedObjects.addAll(objs);
     }
 
+    public void removeAll() {
+        removedObjects.addAll(objects);
+    }
+
     public void processEntityListChanges() {
         objects.removeAll(removedObjects);
         objects.addAll(addedObjects);
