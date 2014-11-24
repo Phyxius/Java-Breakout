@@ -1,0 +1,44 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+/**
+ * Created by Phyxius on 11/22/2014.
+ */
+public class BasicFileLevel implements Level {
+    private static final int BRICK_WIDTH = 40, BRICK_HEIGHT = 20,
+        BRICK_HSPACING = 20, BRICK_VSPACING = 20, GAME_WIDTH = 800,
+            GAME_HEIGHT = 600;
+    private final int[][] brickHitsArray;
+
+    public BasicFileLevel(String fileText) {
+        Scanner scanner = new Scanner(fileText);
+        String[] header = scanner.nextLine().split("\\s+,\\s+", 3);
+        brickHitsArray = new int[Integer.parseInt(header[0])][
+                Integer.parseInt(header[1])];
+        for(int i = 0; i < brickHitsArray.length && scanner.hasNextLine(); i++){
+            String[] line = scanner.nextLine().split("\\s+,\\s+",
+                    header[0].length() + 1);
+            for(int j = 0; j < line.length && j < brickHitsArray[0].length; j++) {
+                brickHitsArray[i][j] = line[j].equals("") ? 0 :
+                        Integer.parseInt(line[j]);
+            }
+        }
+    }
+
+    @Override
+    public Iterable<GameObject> createObjects() {
+        ArrayList<GameObject> objs = new ArrayList<>();
+        int startx = GAME_WIDTH -
+                (brickHitsArray[0].length * (BRICK_WIDTH + BRICK_HSPACING)) / 2;
+        int starty = GAME_HEIGHT -
+                (brickHitsArray.length * (BRICK_HEIGHT + BRICK_VSPACING)) / 2;
+        for (int i = 0; i < brickHitsArray.length; i++) {
+            for (int j = 0; j < brickHitsArray[i].length; j++) {
+                objs.add(new Brick(startx + j * (BRICK_WIDTH + BRICK_HSPACING),
+                        starty + j * (BRICK_HEIGHT + BRICK_VSPACING),
+                        BRICK_WIDTH, BRICK_HEIGHT, brickHitsArray[i][j]));
+            }
+        }
+        return objs;
+    }
+}
