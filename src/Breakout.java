@@ -1,5 +1,4 @@
 import java.io.IOException;
-import java.nio.file.Paths;
 
 /**
  * Created by Shea on 11/14/2014.
@@ -9,16 +8,24 @@ public class Breakout {
         //TODO: Do threading properly
         Level level;
         try {
-            level = new FileSystemBasicFileLevel(Paths.get(
-                    "levels", "examples", "diamond.csv"));
+            switch (args[0]) {
+                case "fs":
+                    level = new FileSystemBasicFileLevel(args[1]);
+                    break;
+                case "jar":
+                    level = new JarFileBasicFileLevel(args[1]);
+                    break;
+                default:
+                    throw new IOException();
+            }
         }
-        catch(IOException e) {
+        catch(IOException|ArrayIndexOutOfBoundsException e) {
             System.out.println(
                     "Loading level failed, falling back to internal level...");
             level = new BasicLevel(5, 13, 20, 20, 40, 20, 20, 20, 14);
         }
         new GameWindow(level,
-                (args.length > 0) && args[0].toLowerCase().equals("debug")
+                (args.length > 2) && args[2].toLowerCase().equals("debug")
         ).setVisible(true);
     }
 }
