@@ -29,4 +29,12 @@ public abstract class EventManager {
     public boolean isOutOfBounds(Object2D obj) {
         return manager.isOutOfBounds(obj);
     }
+
+    public int getScore() {
+        return manager.getScore();
+    }
+
+    public int getLives() {
+        return manager.getLives();
+    }
 }

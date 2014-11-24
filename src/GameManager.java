@@ -169,4 +169,12 @@ public class GameManager {
         lives = amount;
         livesChangedCallback.accept(lives);
     }
+
+    public int getScore() {
+        return score;
+    }
+
+    public int getLives() {
+        return lives;
+    }
 }
