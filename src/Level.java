@@ -3,4 +3,7 @@
  */
 public interface Level {
     Iterable<GameObject> createObjects();
+    default Level getNextLevelInSequence() {
+        return this;
+    }
 }
