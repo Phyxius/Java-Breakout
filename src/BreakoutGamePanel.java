@@ -7,14 +7,12 @@ import java.awt.event.ActionEvent;
  */
 public class BreakoutGamePanel extends JPanel implements GameArea {
     public static final int STARTING_LIVES = 5;
-    private final GameWindow.GameControlPanel controlPanel;
     private GameManager manager;
     private Timer timer = new Timer((int)(1f/40*1000), this::update);
     public BreakoutGamePanel(GameWindow.GameControlPanel panel, Level level,
                              boolean debug) {
-        controlPanel = panel;
-        manager = new GameManager(this, controlPanel::setScore,
-                controlPanel::setLives, debug);
+        manager = new GameManager(this, panel::setScore,
+                panel::setLives, debug);
         manager.setLives(STARTING_LIVES);
         setPreferredSize(new Dimension(800, 600));
         setFocusable(true);

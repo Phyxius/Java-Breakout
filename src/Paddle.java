@@ -9,8 +9,8 @@ import java.awt.geom.Area;
  * Usage: None, used by Brooke's TestDriver class
  */
 public class Paddle extends GameObject {
-    private Rectangle rect;
-    private int moveSpeed = 10;
+    private final Rectangle rect;
+    private final int moveSpeed = 10;
     /**
      * Constructs a new Paddle with the given parameters
      * @param x the leftmost x value of the paddle

@@ -6,9 +6,9 @@ import java.awt.event.ActionEvent;
  * Created by Shea on 11/12/2014.
  */
 public class GameWindow extends JFrame {
-    JLabel scoreLabel = new JLabel("0 Points"),
-        livesLabel = new JLabel(BreakoutGamePanel.STARTING_LIVES + " lives");
-    BreakoutGamePanel gamePanel;
+    final JLabel scoreLabel = new JLabel("0 Points");
+    final JLabel livesLabel = new JLabel(BreakoutGamePanel.STARTING_LIVES + " lives");
+    final BreakoutGamePanel gamePanel;
     public GameWindow(Level level, boolean debugMode) {
         super("Breakout");
         setLayout(new BorderLayout());
@@ -25,7 +25,7 @@ public class GameWindow extends JFrame {
         private final String PAUSE_TEXT = "Pause";
         private final String UNPAUSE_TEXT = "Unpause";
         private final String START_TEXT = "Start Game";
-        JButton pauseButton = new JButton(START_TEXT);
+        final JButton pauseButton = new JButton(START_TEXT);
         public GameControlPanel() {
             setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
             add(Box.createVerticalGlue());

@@ -12,8 +12,10 @@ public class Ball extends GameObject implements MovableObject {
     private static final int MAX_STARTING_X_SPEED = 5,
         MAX_STARTING_Y_SPEED = 5, MIN_STARTING_X_SPEED = 3,
         MIN_STARTING_Y_SPEED = 3;
-    private Ellipse2D.Double ellipse;
-    private int radius, xSpeed = 0, ySpeed = 0;
+    private final Ellipse2D.Double ellipse;
+    private final int radius;
+    private int xSpeed = 0;
+    private int ySpeed = 0;
 
     /**
      * Constructs a new Ball with given parameters

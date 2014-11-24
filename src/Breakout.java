@@ -32,7 +32,8 @@ public class Breakout {
             level = new BasicLevel(5, 13, 20, 20, 40, 20, 20, 20, 14);
         }
         new GameWindow(level,
-                (argsArray.length > 2) && argsArray[2].toLowerCase().equals("debug")
+                (argsArray.length > 2) &&
+                        argsArray[2].toLowerCase().equals("debug")
         ).setVisible(true);
     }
 }

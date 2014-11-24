@@ -10,9 +10,10 @@ public class Brick extends GameObject implements MovableObject {
     private static final float[] HIT_NUMBER_HUES = {
             0, 60f/360, 180f/360, 240f/360, 300f/360, 120f/360,
     };
+    @SuppressWarnings("FieldCanBeLocal")
     private final int RECTANGLE_SPACING = 2;
     private int hits;
-    private Rectangle rect;
+    private final Rectangle rect;
     private final int value;
     private int xSpeed = 0, ySpeed = 0;
     /**

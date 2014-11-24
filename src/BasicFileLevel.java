@@ -5,9 +5,11 @@ import java.util.Scanner;
  * Created by Phyxius on 11/22/2014.
  */
 public class BasicFileLevel implements Level {
-    private static final int BRICK_WIDTH = 40, BRICK_HEIGHT = 20,
-        BRICK_HSPACING = 20, BRICK_VSPACING = 20, GAME_WIDTH = 800,
-            GAME_HEIGHT = 600;
+    private static final int BRICK_WIDTH = 40;
+    private static final int BRICK_HEIGHT = 20;
+    private static final int BRICK_HSPACING = 20;
+    private static final int BRICK_VSPACING = 20;
+    private static final int GAME_WIDTH = 800;
     private final int[][] brickHitsArray;
 
     public BasicFileLevel(String fileText) {
