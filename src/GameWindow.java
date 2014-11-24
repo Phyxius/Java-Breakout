@@ -29,10 +29,10 @@ public class GameWindow extends JFrame {
         public GameControlPanel() {
             setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
             add(Box.createVerticalGlue());
-            scoreLabel.setAlignmentX(Component.LEFT_ALIGNMENT);
             add(scoreLabel);
-            livesLabel.setAlignmentX(Component.LEFT_ALIGNMENT);
             add(livesLabel);
+            livesLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
+            scoreLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
             pauseButton.setAlignmentX(Component.CENTER_ALIGNMENT);
             pauseButton.addActionListener(this::togglePause);
             add(pauseButton);

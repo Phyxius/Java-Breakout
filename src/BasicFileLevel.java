@@ -12,12 +12,12 @@ public class BasicFileLevel implements Level {
 
     public BasicFileLevel(String fileText) {
         Scanner scanner = new Scanner(fileText);
-        String[] header = scanner.nextLine().split("\\s+,\\s+", 3);
+        String[] header = scanner.nextLine().split("\\s*,\\s*", 3);
         brickHitsArray = new int[Integer.parseInt(header[0])][
                 Integer.parseInt(header[1])];
         for(int i = 0; i < brickHitsArray.length && scanner.hasNextLine(); i++){
-            String[] line = scanner.nextLine().split("\\s+,\\s+",
-                    header[0].length() + 1);
+            String[] line = scanner.nextLine().split("\\s*,\\s*",
+                    brickHitsArray[0].length + 1);
             for(int j = 0; j < line.length && j < brickHitsArray[0].length; j++) {
                 brickHitsArray[i][j] = line[j].equals("") ? 0 :
                         Integer.parseInt(line[j]);
@@ -28,14 +28,16 @@ public class BasicFileLevel implements Level {
     @Override
     public Iterable<GameObject> createObjects() {
         ArrayList<GameObject> objs = new ArrayList<>();
-        int startx = GAME_WIDTH -
-                (brickHitsArray[0].length * (BRICK_WIDTH + BRICK_HSPACING)) / 2;
-        int starty = GAME_HEIGHT -
-                (brickHitsArray.length * (BRICK_HEIGHT + BRICK_VSPACING)) / 2;
+        int startx = (GAME_WIDTH - (brickHitsArray[0].length *
+                (BRICK_WIDTH + BRICK_HSPACING))) / 2;
+        int starty = 20;
         for (int i = 0; i < brickHitsArray.length; i++) {
             for (int j = 0; j < brickHitsArray[i].length; j++) {
+                if (brickHitsArray[i][j] == 0) {
+                    continue;
+                }
                 objs.add(new Brick(startx + j * (BRICK_WIDTH + BRICK_HSPACING),
-                        starty + j * (BRICK_HEIGHT + BRICK_VSPACING),
+                        starty + i * (BRICK_HEIGHT + BRICK_VSPACING),
                         BRICK_WIDTH, BRICK_HEIGHT, brickHitsArray[i][j]));
             }
         }
