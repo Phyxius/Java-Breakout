@@ -1,3 +1,5 @@
+package breakout;
+
 import java.awt.*;
 
 public interface GameArea {

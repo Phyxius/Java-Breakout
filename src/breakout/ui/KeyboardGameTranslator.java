@@ -1,3 +1,7 @@
+package breakout.ui;
+
+import breakout.managers.GameManager;
+
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 

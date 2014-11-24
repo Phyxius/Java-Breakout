@@ -1,3 +1,7 @@
+package breakout.ui;
+
+import breakout.levels.Level;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -10,7 +14,7 @@ public class GameWindow extends JFrame {
     final JLabel livesLabel = new JLabel(BreakoutGamePanel.STARTING_LIVES + " lives");
     final BreakoutGamePanel gamePanel;
     public GameWindow(Level level, boolean debugMode) {
-        super("Breakout");
+        super("breakout.Breakout");
         setLayout(new BorderLayout());
         GameControlPanel controlPanel = new GameControlPanel();
         add(controlPanel, BorderLayout.LINE_END);

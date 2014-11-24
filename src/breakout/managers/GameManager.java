@@ -1,4 +1,8 @@
+package breakout.managers;
 
+import breakout.GameArea;
+import breakout.gameobjects.GameObject;
+import breakout.gameobjects.Object2D;
 
 import java.awt.*;
 import java.awt.event.KeyEvent;

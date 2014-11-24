@@ -1,3 +1,5 @@
+package breakout.managers;
+
 /**
 * Created by Shea on 11/11/2014.
 */

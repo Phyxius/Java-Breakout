@@ -1,3 +1,11 @@
+package breakout;
+
+import breakout.levels.BasicLevel;
+import breakout.levels.FileSystemBasicFileLevel;
+import breakout.levels.JarFileBasicFileLevel;
+import breakout.levels.Level;
+import breakout.ui.GameWindow;
+
 import javax.swing.*;
 import java.io.IOException;
 

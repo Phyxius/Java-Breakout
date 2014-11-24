@@ -1,3 +1,9 @@
+package breakout.managers;
+
+import breakout.gameobjects.GameObject;
+import breakout.managers.EventManager;
+import breakout.managers.GameManager;
+
 import java.util.Collection;
 
 /**

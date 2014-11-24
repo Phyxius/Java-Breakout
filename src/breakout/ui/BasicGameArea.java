@@ -1,3 +1,7 @@
+package breakout.ui;
+
+import breakout.GameArea;
+
 /**
  * Created by Shea on 11/11/2014.
  */

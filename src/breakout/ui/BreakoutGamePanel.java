@@ -1,3 +1,15 @@
+package breakout.ui;
+
+import breakout.GameArea;
+import breakout.levels.Level;
+import breakout.ToggleLatch;
+import breakout.gameobjects.Ball;
+import breakout.gameobjects.Brick;
+import breakout.gameobjects.GameObject;
+import breakout.gameobjects.Paddle;
+import breakout.managers.GameManager;
+import breakout.managers.UpdateManager;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;

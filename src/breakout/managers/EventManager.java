@@ -1,3 +1,7 @@
+package breakout.managers;
+
+import breakout.gameobjects.Object2D;
+
 import java.awt.*;
 
 /**
