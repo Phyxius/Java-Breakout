@@ -36,4 +36,17 @@ public final class Util {
             return s.useDelimiter("\\A").next();
         }
     }
+
+    /**
+     * Created by Phyxius on 11/23/2014.
+     */
+    public static class ToggleLatch {
+        private boolean lastState = false;
+
+        public boolean update(boolean state) {
+            boolean ret = !lastState & state;
+            lastState = state;
+            return ret;
+        }
+    }
 }

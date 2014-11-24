@@ -1,8 +1,8 @@
 package breakout.ui;
 
 import breakout.GameArea;
+import breakout.Util;
 import breakout.levels.Level;
-import breakout.ToggleLatch;
 import breakout.gameobjects.Ball;
 import breakout.gameobjects.Brick;
 import breakout.gameobjects.GameObject;
@@ -87,7 +87,7 @@ public class BreakoutGamePanel extends JPanel implements GameArea {
     }
 
     private class UtilityObject extends GameObject {
-        ToggleLatch debugLatch = new ToggleLatch();
+        Util.ToggleLatch debugLatch = new Util.ToggleLatch();
         public UtilityObject() {
             super(new Rectangle(-10, -10, 1, 1));
         }
