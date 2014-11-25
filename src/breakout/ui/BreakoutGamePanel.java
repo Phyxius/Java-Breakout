@@ -1,3 +1,11 @@
+/*
+ * BreakoutGamePanel.java
+ * Copyright (c) Shea Polansky 2014.
+ * Created for Brooke Chenoweth Creel's Intermediate Programming course
+ * Purpose: Draws the game to the window
+ * Usage: Used by BreakoutGameWindow
+ */
+
 package breakout.ui;
 
 import breakout.GameArea;
@@ -15,14 +23,21 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.KeyEvent;
 
-/**
- * Created by Shea on 11/14/2014.
- */
 public class BreakoutGamePanel extends JPanel implements GameArea {
     public static final int STARTING_LIVES = 5;
     private GameManager manager;
     private Timer timer = new Timer((int)(1f/40*1000), this::update);
     private Level level, initialLevel;
+
+    /**
+     * Constructs a new BreakoutGamePanel with the given ControlPanel, Level,
+     * and debug mode
+     * @param panel the ControlPanel used to display score and to control
+     *              pausing
+     * @param level the Level the game will start on
+     * @param debug whether or not to start with debug mode on (true) or off
+     *              (false)
+     */
     public BreakoutGamePanel(GameWindow.GameControlPanel panel, Level level,
                              boolean debug) {
         this.level = level;
@@ -37,6 +52,10 @@ public class BreakoutGamePanel extends JPanel implements GameArea {
         manager.addAll(level.createObjects());
     }
 
+    /**
+     * Adds the 'default' objects to the current game world
+     * Includes the Ball, the Paddle, and the UtilityObject
+     */
     private void addDefaultObjects() {
         manager.add(new Paddle(400, 590, 100, 10));
         Ball b = new Ball(400, 300, 20);
@@ -45,6 +64,11 @@ public class BreakoutGamePanel extends JPanel implements GameArea {
         manager.add(new UtilityObject());
     }
 
+    /**
+     * Optionally advances the level, then resets the game world to the default
+     * state, including 'default' objects.
+     * @param loadNext whether or not to advance the level before the reset
+     */
     private void resetLevel(boolean loadNext) {
         manager.removeAll();
         if (loadNext) {
@@ -54,6 +78,9 @@ public class BreakoutGamePanel extends JPanel implements GameArea {
         manager.addAll(level.createObjects());
     }
 
+    /**
+     * Toggles whether or not the game is paused
+     */
     public void togglePause() {
         if (timer.isRunning()) {
             timer.stop();
@@ -64,16 +91,27 @@ public class BreakoutGamePanel extends JPanel implements GameArea {
         }
     }
 
+    /**
+     * Shows the 'You won' dialog, blocking until it is closed.
+     */
     private void showGameWonDialog() {
         JOptionPane.showMessageDialog(this,
-                "Congratulations! You completed the level.\nReady for the next one?");
+                "Congratulations! You completed the level.\n" +
+                        "Ready for the next one?");
     }
 
+    /**
+     * Shows the 'You lose' dialog, blocking until it is closed
+     */
     private void showGameLostDialog() {
         JOptionPane.showMessageDialog(this,
                 "Oh dear. You appear to have lost.\nTry again?");
     }
 
+    /**
+     * Draws the game world to the Graphics canvas
+     * @param g the canvas to draw on
+     */
     @Override
     public void paintComponent(Graphics g) {
         g.setColor(Color.black);
@@ -81,17 +119,34 @@ public class BreakoutGamePanel extends JPanel implements GameArea {
         manager.draw((Graphics2D)g);
     }
 
+    /**
+     * Updates the game world, then repaints the panel
+     * @param e Ignored
+     */
     private void update(ActionEvent e) {
         manager.update();
         repaint();
     }
 
+    /**
+     * A Utility class that detects game winning and losing, and toggles debug
+     * mode.
+     */
     private class UtilityObject extends GameObject {
         Util.ToggleLatch debugLatch = new Util.ToggleLatch();
+
+        /**
+         * Constructs a new UtilityObject
+         */
         public UtilityObject() {
             super(new Rectangle(-10, -10, 1, 1));
         }
 
+        /**
+         * Checks for and responds to winning and losing conditions, as well as
+         * toggling debug mode when appropriate
+         * @param u the UpdateManager to use to interact with the game world
+         */
         @Override
         public void update(UpdateManager u) {
             if (u.getLives() < 1) {

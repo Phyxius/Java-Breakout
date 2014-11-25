@@ -18,14 +18,14 @@ public abstract class GameObject implements Object2D {
     protected Area boundingArea;
 
     /**
-     * Constructs a new breakout.gameobjects.GameObject with a given breakout.GameArea and bounding shape
+     * Constructs a new GameObject with a given breakout.GameArea and bounding shape
      * @param boundingArea the bounding Area of the object
      */
     public GameObject(Area boundingArea) {
         this.boundingArea = boundingArea;
     }
     /**
-     * Constructs a new breakout.gameobjects.GameObject with a given breakout.GameArea and bounding shape
+     * Constructs a new GameObject with a given breakout.GameArea and bounding shape
      * Converts the shape to an Area object for use in collisions
      * @param boundingShape the bounding shape of the object
      */
@@ -33,8 +33,10 @@ public abstract class GameObject implements Object2D {
         this(new Area(boundingShape));
     }
 
-    /* If you don't manually initialize boundingArea before this, you are going
-    to have a bad time.
+    /**
+     * Constructs a new GameObject with a null boundingArea
+     * You MUST manually initialize the boundingArea, or override
+     * getBoundingArea, or you will get NullPointerExceptions everywhere.
      */
     public GameObject() {
         boundingArea = null;
@@ -104,30 +106,46 @@ public abstract class GameObject implements Object2D {
     }
 
     /**
-     * gets the bounding area of the breakout.gameobjects.GameObject
+     * gets the bounding area of the GameObject
      * @return the bounding area
      */
     public Area getBoundingArea() {
         return boundingArea;
     }
 
-    protected void setBoundingArea(Area boundingArea) {
-        this.boundingArea = boundingArea;
-    }
-
+    /**
+     * Sets the boundingArea to the specified Shape
+     * @param boundingArea the Shape to set the boundingArea to
+     */
     protected void setBoundingArea(Shape boundingArea) {
         this.boundingArea = new Area(boundingArea);
     }
 
+    /**
+     * Updates the object by one tick. Does nothing by default.
+     * @param u the UpdateManager to use to interact with the game world
+     */
     public void update(UpdateManager u) {
 
     }
 
-    @SuppressWarnings("EmptyMethod")
+    /**
+     * Draws the GameObject to the specified Graphics2D canvas
+     * This method MUST have no side effects on the game world; it may be called
+     * more often than the Update() method.
+     * @param g the Graphics2D canvas to use
+     * @param manager the DrawingManager to use to interact with the game world
+     */
     public void draw(Graphics2D g, DrawingManager manager) {
 
     }
 
+    /**
+     * Called when this object intersects another. This method may have the side
+     * effects allowed by the use of the given CollisionManager object
+     * @param other the GameObject that this one collided with
+     * @param manager the CollisionManager used to interact with the game world
+     */
     public void onIntersect(GameObject other, CollisionManager manager) {
 
     }
