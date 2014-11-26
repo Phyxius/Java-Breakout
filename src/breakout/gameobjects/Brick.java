@@ -1,3 +1,11 @@
+/*
+ * Brick.java
+ * Copyright (c) Shea Polansky 2014.
+ * Created for Brooke Chenoweth Creel's Intermediate Programming course
+ * Purpose: Bare-bones Brick object for Breakout
+ * Usage: Add to a GameArea
+ */
+
 package breakout.gameobjects;
 
 import breakout.managers.CollisionManager;
@@ -6,12 +14,6 @@ import breakout.managers.UpdateManager;
 
 import java.awt.*;
 
-/**
- * Copyright 2014 Shea Polansky
- * Created for Brooke Chenoweth's Intermediate Programming course
- * Bare-bones brick object for breakout
- * Usage: None, used by Brooke's TestDriver class
- */
 public class Brick extends GameObject implements MovableObject {
     private static final float[] HIT_NUMBER_HUES = {
             0, 60f/360, 180f/360, 240f/360, 300f/360, 120f/360,

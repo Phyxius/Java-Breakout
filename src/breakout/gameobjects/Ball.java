@@ -1,3 +1,11 @@
+/*
+ * Ball.java
+ * Copyright (c) Shea Polansky 2014.
+ * Created for Brooke Chenoweth Creel's Intermediate Programming course
+ * Purpose: Basic Ball class
+ * Usage: Add to a GameManager
+ */
+
 package breakout.gameobjects;
 
 import breakout.Util;
@@ -9,12 +17,6 @@ import java.awt.*;
 import java.awt.geom.Area;
 import java.awt.geom.Ellipse2D;
 
-/**
- * Copyright 2014 Shea Polansky
- * Created for Brooke Chenoweth's Intermediate Programming course
- * Bare-bones breakout.gameobjects.Ball object for breakout
- * Usage: None, used by Brooke's TestDriver class
- */
 public class Ball extends GameObject implements MovableObject {
     private static final int MAX_STARTING_X_SPEED = 5,
         MAX_STARTING_Y_SPEED = 5, MIN_STARTING_X_SPEED = 3,
@@ -25,8 +27,7 @@ public class Ball extends GameObject implements MovableObject {
     private int ySpeed = 0;
 
     /**
-     * Constructs a new breakout.gameobjects.Ball with given parameters
-     *
+     * Constructs a new Ball with given parameters
      * @param x        the center x value of the ball
      * @param y        the center y value of the ball
      * @param diameter the diameter of the ball
@@ -38,27 +39,48 @@ public class Ball extends GameObject implements MovableObject {
         radius = diameter / 2;
     }
 
+    /**
+     * @return the X speed
+     */
     public int getXSpeed() {
         return xSpeed;
     }
 
+    /**
+     * Set the current X speed to a given value
+     * @param xSpeed the speed to set
+     */
     public void setXSpeed(int xSpeed) {
         this.xSpeed = xSpeed;
     }
 
+    /**
+     * @return the Y speed
+     */
     public int getYSpeed() {
         return ySpeed;
     }
 
+    /**
+     * Sets the  current Y speed to a given value
+     * @param ySpeed the speed to set
+     */
     public void setYSpeed(int ySpeed) {
         this.ySpeed = ySpeed;
     }
 
+    /**
+     * @return the current bounding Area
+     */
     @Override
     public Area getBoundingArea() {
         return new Area(ellipse);
     }
 
+    /**
+     * Moves the ball forward and bounces off walls
+     * @param updateManager the UpdateManager used to interact with the world
+     */
     @Override
     public void update(UpdateManager updateManager) {
         int unclampedNewXPos = (int)ellipse.getX() + xSpeed;
@@ -89,6 +111,11 @@ public class Ball extends GameObject implements MovableObject {
         ellipse.y = newYPos;
     }
 
+    /**
+     * Reacts to collisions
+     * @param other the GameObject that this one collided with
+     * @param manager the CollisionManager used to interact with the game world
+     */
     @Override
     public void onIntersect(GameObject other, CollisionManager manager) {
         if (other.getClass().equals(Paddle.class) && getYSpeed() > 0) {
@@ -115,16 +142,27 @@ public class Ball extends GameObject implements MovableObject {
         }
     }
 
+    /**
+     * @return the current X value
+     */
     @Override
     public int getX() {
         return (int)getBoundingRectangle().getCenterX();
     }
 
+    /**
+     * @return the current Y value
+     */
     @Override
     public int getY() {
         return (int)getBoundingRectangle().getCenterY();
     }
 
+    /**
+     * Draws the Ball to the given canvas
+     * @param g the Graphics2D canvas to use
+     * @param manager the DrawingManager to use to interact with the game world
+     */
     @Override
     public void draw(Graphics2D g, DrawingManager manager) {
         g.setColor(Color.GREEN);

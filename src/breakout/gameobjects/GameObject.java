@@ -1,3 +1,11 @@
+/*
+ * GameObject.java
+ * Copyright (c) Shea Polansky 2014.
+ * Created for Brooke Chenoweth Creel's Intermediate Programming course
+ * Purpose: Superclass for game objects
+ * Usage: Inherit
+ */
+
 package breakout.gameobjects;
 
 import breakout.managers.CollisionManager;
@@ -7,13 +15,6 @@ import breakout.managers.UpdateManager;
 import java.awt.*;
 import java.awt.geom.Area;
 
-/**
- * Copyright 2014 Shea Polansky
- * Created for Brooke Chenoweth's Intermediate Programming course
- * Acts as the super class for all game objects, includes helper methods
- * to reduce code replication
- * Usage: None, used by Brooke's TestDriver class
- */
 public abstract class GameObject implements Object2D {
     protected Area boundingArea;
 

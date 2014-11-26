@@ -1,3 +1,11 @@
+/*
+ * Paddle.java
+ * Copyright (c) Shea Polansky 2014.
+ * Created for Brooke Chenoweth Creel's Intermediate Programming course
+ * Purpose: Paddle for breakout
+ * Usage: Add to a GameManager
+ */
+
 package breakout.gameobjects;
 
 import breakout.managers.DrawingManager;
@@ -7,12 +15,6 @@ import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.geom.Area;
 
-/**
- * Copyright 2014 Shea Polansky
- * Created for Brooke Chenoweth's Intermediate Programming course
- * Bare-bones paddle object for breakout
- * Usage: None, used by Brooke's TestDriver class
- */
 public class Paddle extends GameObject {
     private final Rectangle rect;
     private final int moveSpeed = 10;
@@ -27,11 +29,19 @@ public class Paddle extends GameObject {
         rect = new Rectangle(x, y, width, height);
     }
 
+    /**
+     * @return the current bounding Area
+     */
     @Override
     public Area getBoundingArea() {
         return new Area(rect);
     }
 
+    /**
+     * Moves the paddle according to user input
+     * @param updateManager the UpdateManager used to interact with the game
+     *                      world
+     */
     @Override
     public void update(UpdateManager updateManager) {
         if (updateManager.getKeyState(KeyEvent.VK_RIGHT)) {
@@ -49,6 +59,11 @@ public class Paddle extends GameObject {
         }
     }
 
+    /**
+     * Draws the paddle to the game world
+     * @param g the Graphics2D canvas to use
+     * @param manager the DrawingManager to use to interact with the game world
+     */
     @Override
     public void draw(Graphics2D g, DrawingManager manager) {
         g.setColor(Color.RED);

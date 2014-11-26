@@ -1,3 +1,11 @@
+/*
+ * Object2D.java
+ * Copyright (c) Shea Polansky 2014.
+ * Created for Brooke Chenoweth Creel's Intermediate Programming course
+ * Purpose: Superclass for 2D objects
+ * Usage: Inherit and implement
+ */
+
 package breakout.gameobjects;
 
 import java.awt.Rectangle;
