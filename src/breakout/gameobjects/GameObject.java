@@ -53,7 +53,7 @@ public abstract class GameObject implements Object2D {
     }
 
     /**
-     * Returns whether this object intersects another breakout.gameobjects.GameObject, using more
+     * Returns whether this object intersects another GameObject, using more
      * accurate collision testing
      * @param other the other object to test against
      * @return true if they intersect, false otherwise

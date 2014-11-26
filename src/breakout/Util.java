@@ -18,7 +18,7 @@ public final class Util {
     public static final Random RANDOM = new Random();
 
     /**
-     * Clamps a given value to be at most a given maxiumum, and at least a given
+     * Clamps a given value to be at most a given maximum, and at least a given
      * minimum
      * @param val the value to clamp
      * @param min the minimum value of the return
@@ -88,7 +88,7 @@ public final class Util {
         /**
          * Updates the state of the latch
          * @param state the current state
-         * @return true if the new stae is true and the previous state is false,
+         * @return true if the new state is true and the previous state is false,
          * false otherwise
          */
         public boolean update(boolean state) {

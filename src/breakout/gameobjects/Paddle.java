@@ -19,7 +19,7 @@ public class Paddle extends GameObject {
     private final Rectangle rect;
     private final int moveSpeed = 10;
     /**
-     * Constructs a new breakout.gameobjects.Paddle with the given parameters
+     * Constructs a new Paddle with the given parameters
      * @param x the leftmost x value of the paddle
      * @param y the leftmost y value of the paddle
      * @param width the width of the paddle

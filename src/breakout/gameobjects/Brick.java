@@ -25,7 +25,7 @@ public class Brick extends GameObject implements MovableObject {
     private final int value;
     private int xSpeed = 0, ySpeed = 0;
     /**
-     * Constructs a new breakout.gameobjects.Brick with given parameters
+     * Constructs a new Brick with given parameters
      * @param x the leftmost x of the paddle
      * @param y the uppermost y of the paddle
      * @param width the width of the paddle

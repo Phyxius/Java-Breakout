@@ -25,9 +25,10 @@ import java.awt.event.KeyEvent;
 
 public class BreakoutGamePanel extends JPanel implements GameArea {
     public static final int STARTING_LIVES = 5;
-    private GameManager manager;
-    private Timer timer = new Timer((int)(1f/40*1000), this::update);
-    private Level level, initialLevel;
+    private final GameManager manager;
+    private final Timer timer = new Timer((int)(1f/40*1000), this::update);
+    private Level level;
+    private final Level initialLevel;
 
     /**
      * Constructs a new BreakoutGamePanel with the given ControlPanel, Level,
@@ -133,7 +134,7 @@ public class BreakoutGamePanel extends JPanel implements GameArea {
      * mode.
      */
     private class UtilityObject extends GameObject {
-        Util.ToggleLatch debugLatch = new Util.ToggleLatch();
+        final Util.ToggleLatch debugLatch = new Util.ToggleLatch();
 
         /**
          * Constructs a new UtilityObject
