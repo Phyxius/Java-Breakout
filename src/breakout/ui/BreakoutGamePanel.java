@@ -51,6 +51,7 @@ public class BreakoutGamePanel extends JPanel implements GameArea {
         addDefaultObjects();
         addKeyListener(new KeyboardGameTranslator(manager));
         manager.addAll(level.createObjects());
+        manager.processGameObjectListChanges();
     }
 
     /**

@@ -26,7 +26,7 @@ public class Paddle extends GameObject {
      * @param height the height of the paddle
      */
     public Paddle(int x, int y, int width, int height) {
-        rect = new Rectangle(x, y, width, height);
+        rect = new Rectangle(x-width/2, y, width, height);
     }
 
     /**
