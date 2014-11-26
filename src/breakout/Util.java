@@ -79,6 +79,17 @@ public final class Util {
     }
 
     /**
+     * Returns a given String repeated a given number of times
+     * Java doesn't have a method for this built in because Java
+     * @param string the string to repeat
+     * @param number the number of times to repeat
+     * @return the string repeated the number of times
+     */
+    public static String stringMultiply(String string, int number) {
+        return new String(new char[number]).replace("\0", string);
+    }
+
+    /**
      * Boolean rising edge triggered latch class designed to be used for
      * key press style events
      */
