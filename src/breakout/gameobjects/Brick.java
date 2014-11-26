@@ -135,11 +135,17 @@ public class Brick extends GameObject implements MovableObject {
      * layer has 100% saturation, the next with 80%, and so on.
      * All layers except the innermost are drawn with the last color.
      * The innermost layer is indexed based on the number of hits.
+     * Invincible bricks are drawn as solid gray.
      * @param g the Graphics2D canvas to use
      * @param manager the DrawingManager to use to interact with the game world
      */
     @Override
     public void draw(Graphics2D g, DrawingManager manager) {
+        if (hits < 0) {
+            g.setColor(Color.GRAY);
+            g.fill(getBoundingArea());
+            return;
+        }
         int level = 0;
         for(; level < hits / HIT_NUMBER_HUES.length; level++) {
             g.setColor(Color.getHSBColor(
@@ -164,5 +170,13 @@ public class Brick extends GameObject implements MovableObject {
      */
     public int getWorth() {
         return value;
+    }
+
+    /**
+     * @return whether or not this brick should be included in the number of
+     * bricks needed to count for level completion.
+     */
+    public boolean countsTowardLevelCompletion() {
+        return hits > -1;
     }
 }

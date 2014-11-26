@@ -159,7 +159,8 @@ public class BreakoutGamePanel extends JPanel implements GameArea {
                 resetLevel(false);
             }
             else if (u.getAllObjects().stream().noneMatch( //Check for game won
-                    o -> o.getClass().isAssignableFrom(Brick.class))) {
+                    o -> o.getClass().isAssignableFrom(Brick.class) &&
+                            ((Brick)o).countsTowardLevelCompletion())) {
                 showGameWonDialog();
                 resetLevel(true);
             }
