@@ -1,3 +1,11 @@
+/*
+ * BasicFileLevel.java
+ * Copyright (c) Shea Polansky 2014.
+ * Created for Brooke Chenoweth Creel's Intermediate Programming course
+ * Purpose: Parses Levels that adhere to the standard Level format
+ * Usage: Pass the correctly formatted Level text as a String
+ */
+
 package breakout.levels;
 
 import breakout.gameobjects.Brick;
@@ -6,9 +14,6 @@ import breakout.gameobjects.GameObject;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-/**
- * Created by Phyxius on 11/22/2014.
- */
 public class BasicFileLevel implements Level {
     private static final int BRICK_WIDTH = 40;
     private static final int BRICK_HEIGHT = 20;
@@ -17,6 +22,10 @@ public class BasicFileLevel implements Level {
     private static final int GAME_WIDTH = 800;
     private final int[][] brickHitsArray;
 
+    /**
+     * Constructs a new BasicFileLevel from the specified String
+     * @param fileText the text of the Level to parse
+     */
     public BasicFileLevel(String fileText) {
         Scanner scanner = new Scanner(fileText);
         String[] header = scanner.nextLine().split("\\s*,\\s*", 3);
@@ -32,6 +41,10 @@ public class BasicFileLevel implements Level {
         }
     }
 
+    /**
+     * Creates the GameObjects in the Level
+     * @return an Iterable containing the GameObjects in the Level
+     */
     @Override
     public Iterable<GameObject> createObjects() {
         ArrayList<GameObject> objs = new ArrayList<>();

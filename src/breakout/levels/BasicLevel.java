@@ -1,3 +1,12 @@
+/*
+ * BasicLevel.java
+ * Copyright (c) Shea Polansky 2014.
+ * Created for Brooke Chenoweth Creel's Intermediate Programming course
+ * Purpose: A basic Level class that creates a solid rectangle of Bricks of a
+ * given number of hits
+ * Usage: Construct and pass appropriately
+ */
+
 package breakout.levels;
 
 import breakout.gameobjects.Brick;
@@ -5,9 +14,6 @@ import breakout.gameobjects.GameObject;
 
 import java.util.ArrayList;
 
-/**
- * Created by Phyxius on 11/22/2014.
- */
 public class BasicLevel implements Level {
     private final int rows, columns, vSpacing, hSpacing, width, height,
             startX, startY;
