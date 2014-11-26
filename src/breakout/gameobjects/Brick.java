@@ -30,9 +30,12 @@ public class Brick extends GameObject implements MovableObject {
      * @param y the uppermost y of the paddle
      * @param width the width of the paddle
      * @param height the height of the paddle
-     * @param hits the number of hits to destroy the brick
+     * @param hits the number of hits to destroy the brick, max 20
      */
     public Brick(int x, int y, int width, int height, int hits, int value) {
+        if (hits > 20) {
+            throw new IllegalArgumentException("Hits cannot exceed 20");
+        }
         this.hits = hits;
         this.value = value;
         rect = new Rectangle(x, y, width, height);
