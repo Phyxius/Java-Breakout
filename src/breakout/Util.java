@@ -92,6 +92,8 @@ public final class Util {
     /**
      * Boolean rising edge triggered latch class designed to be used for
      * key press style events
+     * I would export this to be a default part of GameManager if it was used
+     * more than once.
      */
     public static class ToggleLatch {
         private boolean lastState = false;
