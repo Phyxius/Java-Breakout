@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ab1da0eb-6323-4ca2-be23-da9999edf297" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/Lab_9_jar.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/Lab_9_jar.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README" afterPath="$PROJECT_DIR$/README" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/breakout/Breakout.java" afterPath="$PROJECT_DIR$/src/breakout/Breakout.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Lab 8.iws" />
@@ -40,12 +39,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README" pinned="false" current-in-tab="true">
+      <file leaf-file-name="README" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.7969799" vertical-offset="0" max-vertical-offset="1173">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1173">
               <caret line="47" column="65" selection-start-line="47" selection-start-column="65" selection-end-line="47" selection-end-column="65" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Breakout.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/breakout/Breakout.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.7766831" vertical-offset="547" max-vertical-offset="1258">
+              <caret line="60" column="67" selection-start-line="60" selection-start-column="67" selection-end-line="60" selection-end-column="67" />
+              <folding>
+                <element signature="e#0#2317#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -162,7 +174,6 @@
         <option value="$PROJECT_DIR$/src/breakout/GameArea.java" />
         <option value="$PROJECT_DIR$/src/breakout/gameobjects/GameObject.java" />
         <option value="$PROJECT_DIR$/src/breakout/ui/GameWindow.java" />
-        <option value="$PROJECT_DIR$/src/breakout/Breakout.java" />
         <option value="$PROJECT_DIR$/src/breakout/gameobjects/Paddle.java" />
         <option value="$PROJECT_DIR$/src/breakout/levels/JarSequenceBasicLevel.java" />
         <option value="$PROJECT_DIR$/src/breakout/levels/SequenceLevel.java" />
@@ -175,6 +186,7 @@
         <option value="$PROJECT_DIR$/src/breakout/ui/BreakoutGamePanel.java" />
         <option value="$PROJECT_DIR$/res/levels/simple/invbrick.csv" />
         <option value="$PROJECT_DIR$/README" />
+        <option value="$PROJECT_DIR$/src/breakout/Breakout.java" />
       </list>
     </option>
   </component>
@@ -834,7 +846,7 @@
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="breakout.Breakout" />
       <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="jar levels/simple/invbrick.csv debug" />
+      <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/out/production/Lab 9" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" value="" />
@@ -899,7 +911,7 @@
       <workItem from="1416798187285" duration="4722000" />
       <workItem from="1416802938984" duration="13415000" />
       <workItem from="1416957605181" duration="7249000" />
-      <workItem from="1417033848917" duration="10449000" />
+      <workItem from="1417033848917" duration="10481000" />
     </task>
     <task id="LOCAL-00001" summary="Added BasicGameArea class">
       <created>1415730598500</created>
@@ -1273,15 +1285,21 @@
       <option name="project" value="LOCAL" />
       <updated>1417046330357</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="Completed README">
+      <created>1417046821542</created>
+      <option name="number" value="00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1417046821543</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="116121000" />
+    <option name="totallyTimeSpent" value="116153000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1332" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32975295" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1297,7 +1315,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3273495" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2325228" sideWeight="0.49946293" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2325228" sideWeight="0.49946293" order="0" side_tool="false" content_ui="combo" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24973147" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1329,7 +1347,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Added BasicFileLevel" />
     <MESSAGE value="Added BasicFileSystemFileLevel" />
     <MESSAGE value="Renamed project properly" />
     <MESSAGE value="Got BasicFileLevel working properly" />
@@ -1354,7 +1371,8 @@
     <MESSAGE value="More brick commenting&#10;Add blank README" />
     <MESSAGE value="Added CC0 License" />
     <MESSAGE value="Added inbrick level&#10;Fixed drawing of invincible bricks&#10;Check for brick invincibility when deciding if the level is won" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added inbrick level&#10;Fixed drawing of invincible bricks&#10;Check for brick invincibility when deciding if the level is won" />
+    <MESSAGE value="Completed README" />
+    <option name="LAST_COMMIT_MESSAGE" value="Completed README" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1771,17 +1789,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/breakout/Breakout.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1258">
-          <caret line="44" column="26" selection-start-line="44" selection-start-column="26" selection-end-line="44" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#2318#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/breakout/gameobjects/GameObject.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="629" max-vertical-offset="2414">
@@ -1885,9 +1892,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.7969799" vertical-offset="0" max-vertical-offset="1173">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1173">
           <caret line="47" column="65" selection-start-line="47" selection-start-column="65" selection-end-line="47" selection-end-column="65" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/breakout/Breakout.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7766831" vertical-offset="547" max-vertical-offset="1258">
+          <caret line="60" column="67" selection-start-line="60" selection-start-column="67" selection-end-line="60" selection-end-column="67" />
+          <folding>
+            <element signature="e#0#2317#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -58,7 +58,7 @@ public class Breakout {
                 System.out.println(
                         "Loading level failed, falling back to internal level...");
             }
-            level = new BasicLevel(5, 13, 20, 20, 40, 20, 20, 20, 14);
+            level = new BasicLevel(5, 13, 20, 20, 40, 20, 20, 20, 2);
         }
         new GameWindow(level,
                 (argsArray.length > 2) &&
