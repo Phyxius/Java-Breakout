@@ -1,0 +1,48 @@
+AUTHOR:
+Shea Polansky (2014)
+
+DESCRIPTION:
+This is my breakout project. It has very simple graphics, no sounds, and simple
+levels.
+Lots of Java 8 usage.
+
+INVOCATION:
+Three forms of invocation are accepted:
+    "java -jar Breakout.jar" will launch the game with the default level
+    "java -jar Breakout.jar fs <path>" will load a level file from the file system
+    "java -jar Breakout.jar jar <path>" load a level file from the jar. Levels are stored in levels/*, and paths will need to reflect that.
+Appending "debug" to either of the second forms will start the game with debug mode enabled.
+
+CONTROLS:
+The paddle is controlled via arrows.
+Debug mode (overly of rectangle and complex bounding boxes can be toggled with control+d
+
+SCORING:
+Players receive points for hitting bricks with the ball. Hitting a destroyable brick, but not destroying it, is worth 10 points. Destroying a brick is worth 100*MAXIMUM_HIT_COUNT points. Hitting an invincible brick (internally denoted by a brick with a negative remaining hit count) is worth a custom amount, again defaulting to 10 points. Invincible bricks do not count toward whether or not a level is finished.
+
+INTERNALS:
+The game logic is decentralized, with each GameObject having full control of its collision, update, and drawing behavior.
+A centralized list of objects is maintained in a GameManager, which has update and draw methods called by a timer in the game's panel.
+The GameManager updates the score and lives display via IntConsumer's passed through the BreakoutGamePanel.
+The panel has a timer running at 40 ticks/sec that updates the game (which involves updating each object, then resolving collisions) and then redraws the panel with the updated game graphics.
+A strict contract was enforced regarding side effects in the update, draw, and onIntersect methods. Each method can interact with the game world only through the use of a passed Manager object, which wraps the main game manager. Each manager is specialized and exposes only the appropriate methods. For instance, drawing methods are not allowed to have any side effects, so DrawingManagers have no methods for affecting the game world. Update methods have all side-effects available, and onIntersect's have most of them.
+Keyboard state is maintained via an internal Hashmap<Integer,Boolean>. The HashMap is pre-populated via reflection with false values for all the VK_ constants from KeyEvent in order to avoid needing to check for map key existence all over the place.
+Level loading is accomplished via a Level interface, which specifies that each Level should have a side-effect-free method to create and return all of the objects, so that the level can be reloaded without having to recreate the object entirely. The Level interface also has a getNextInSequence() method to allow for level sequences, but that was never implemented. All Levels use the default implementation that returns itself.
+Objects that move implement MovableObject, which specifies an X and Y speed. Objects simply add their X and Y speed to their position each frame.
+Game over detection is performed every tick by a UtilityObject subclass of BreakoutGamePanel. If no bricks remain in play, the level is won, advanced, and reset. If no lives remain, the game is over, the score is wiped, and the game restarts. Either way the player gets a message box telling them what happened.
+
+FUTURE STUFF:
+-Add graphics
+-Add sounds
+-Implement level sequences
+-Add powerups
+-Add custom bricks/etc. and a custom level format to match
+
+KNOWN BUGS:
+Balls will occasionally bounce twice on brick corners due to the quirks of the opposing-corner-based direction-detection algorithm I used. Call it a 'feature' if you can hit a brick exactly on the corner :)
+
+DISTRIBUTION/COPYING/ETC:
+See LICENSE file, included in the root of the Jar.
+
+COMPILING:
+No special options or dependencies (other than Java 8 of course).

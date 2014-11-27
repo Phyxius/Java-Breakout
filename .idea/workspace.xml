@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ab1da0eb-6323-4ca2-be23-da9999edf297" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/levels/simple/invbrick.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/breakout/ui/BreakoutGamePanel.java" afterPath="$PROJECT_DIR$/src/breakout/ui/BreakoutGamePanel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/breakout/gameobjects/Brick.java" afterPath="$PROJECT_DIR$/src/breakout/gameobjects/Brick.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/Lab_9_jar.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/Lab_9_jar.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README" afterPath="$PROJECT_DIR$/README" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -42,11 +40,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README" pinned="false" current-in-tab="false">
+      <file leaf-file-name="README" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="118" max-vertical-offset="1071">
-              <caret line="22" column="10" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
+            <state vertical-scroll-proportion="1.7969799" vertical-offset="0" max-vertical-offset="1173">
+              <caret line="47" column="65" selection-start-line="47" selection-start-column="65" selection-end-line="47" selection-end-column="65" />
               <folding />
             </state>
           </provider>
@@ -65,10 +63,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="invbrick.csv" pinned="false" current-in-tab="true">
+      <file leaf-file-name="invbrick.csv" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/res/levels/simple/invbrick.csv">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.20552677" vertical-offset="0" max-vertical-offset="579">
+            <state vertical-scroll-proportion="-3.9666667" vertical-offset="0" max-vertical-offset="221">
               <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
               <folding />
             </state>
@@ -173,10 +171,10 @@
         <option value="$PROJECT_DIR$/src/breakout/levels/SequenceBasicFileSystemLevel.java" />
         <option value="$PROJECT_DIR$/src/breakout/Util.java" />
         <option value="$PROJECT_DIR$/LICENSE" />
-        <option value="$PROJECT_DIR$/README" />
         <option value="$PROJECT_DIR$/src/breakout/gameobjects/Brick.java" />
         <option value="$PROJECT_DIR$/src/breakout/ui/BreakoutGamePanel.java" />
         <option value="$PROJECT_DIR$/res/levels/simple/invbrick.csv" />
+        <option value="$PROJECT_DIR$/README" />
       </list>
     </option>
   </component>
@@ -544,14 +542,14 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="recentsLimit" value="5" />
     <property name="dynamic.classpath" value="false" />
     <property name="FullScreen" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/README" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="LayoutCode.rearrangeEntriesJava" value="false" />
     <property name="OverrideImplement.combined" value="true" />
@@ -901,7 +899,7 @@
       <workItem from="1416798187285" duration="4722000" />
       <workItem from="1416802938984" duration="13415000" />
       <workItem from="1416957605181" duration="7249000" />
-      <workItem from="1417033848917" duration="9935000" />
+      <workItem from="1417033848917" duration="10449000" />
     </task>
     <task id="LOCAL-00001" summary="Added BasicGameArea class">
       <created>1415730598500</created>
@@ -1269,15 +1267,21 @@
       <option name="project" value="LOCAL" />
       <updated>1417044521870</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="Added inbrick level&#10;Fixed drawing of invincible bricks&#10;Check for brick invincibility when deciding if the level is won">
+      <created>1417046330357</created>
+      <option name="number" value="00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1417046330357</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="115607000" />
+    <option name="totallyTimeSpent" value="116121000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1332" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32975295" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1293,7 +1297,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3273495" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2325228" sideWeight="0.49946293" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2325228" sideWeight="0.49946293" order="0" side_tool="false" content_ui="combo" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24973147" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1325,7 +1329,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Added sample levels&#10;Added stub of FileLevel" />
     <MESSAGE value="Added BasicFileLevel" />
     <MESSAGE value="Added BasicFileSystemFileLevel" />
     <MESSAGE value="Renamed project properly" />
@@ -1350,7 +1353,8 @@
     <MESSAGE value="Capped brick hit count" />
     <MESSAGE value="More brick commenting&#10;Add blank README" />
     <MESSAGE value="Added CC0 License" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added CC0 License" />
+    <MESSAGE value="Added inbrick level&#10;Fixed drawing of invincible bricks&#10;Check for brick invincibility when deciding if the level is won" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added inbrick level&#10;Fixed drawing of invincible bricks&#10;Check for brick invincibility when deciding if the level is won" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1857,14 +1861,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="118" max-vertical-offset="1071">
-          <caret line="22" column="10" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/levels/simple/1brick.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.2666667" vertical-offset="0" max-vertical-offset="221">
@@ -1878,13 +1874,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/res/levels/simple/invbrick.csv">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20552677" vertical-offset="0" max-vertical-offset="579">
+        <state vertical-scroll-proportion="-3.9666667" vertical-offset="0" max-vertical-offset="221">
           <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding />
         </state>
       </provider>
       <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
         <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.7969799" vertical-offset="0" max-vertical-offset="1173">
+          <caret line="47" column="65" selection-start-line="47" selection-start-column="65" selection-end-line="47" selection-end-column="65" />
+          <folding />
+        </state>
       </provider>
     </entry>
   </component>
